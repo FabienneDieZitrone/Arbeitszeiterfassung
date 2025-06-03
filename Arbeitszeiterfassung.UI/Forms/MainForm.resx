@@ -1,0 +1,27 @@
+<!--
+Titel: MainForm.resx
+Version: 1.0
+Letzte Aktualisierung: 02.06.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Forms/MainForm.resx
+Beschreibung: Ressourcen-Datei für das Hauptfenster, enthält das MP-Logo als eingebettete Ressource
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, ...</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, ...</value>
+  </resheader>
+  <data name="mp_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mp-logo.png;System.Drawing.Bitmap, System.Drawing.Common</value>
+  </data>
+</root>

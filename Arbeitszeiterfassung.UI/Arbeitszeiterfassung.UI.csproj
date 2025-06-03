@@ -1,0 +1,52 @@
+<!--
+Titel: Arbeitszeiterfassung.UI.csproj
+Version: 1.1
+Letzte Aktualisierung: 02.06.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj
+Beschreibung: Projektdatei für das Windows Forms UI, inkl. Referenz auf standorte.json im Solution-Konfigurationsverzeichnis
+-->
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Arbeitszeiterfassung.UI</RootNamespace>
+    <AssemblyName>Arbeitszeiterfassung.UI</AssemblyName>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <Platforms>x64</Platforms>
+    <!-- Single-File Deployment Properties -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>Resources\mp-logo.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.*" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="9.*" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj" />
+    <ProjectReference Include="..\Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\mp-logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <!-- Die folgende Zeile sorgt dafür, dass standorte.json aus dem Solution-Ordner 
+         ins Output-Verzeichnis des UI-Projekts kopiert wird -->
+    <None Update="..\Configuration\standorte.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>standorte.json</Link>
+    </None>
+  </ItemGroup>
+</Project>
