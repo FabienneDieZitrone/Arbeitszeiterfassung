@@ -1,0 +1,14 @@
+# Ignore bin and obj directories
+bin/
+obj/
+
+# Visual Studio user files
+*.user
+*.suo
+
+# Build results
+**/bin/
+**/obj/
+
+# VSCode settings
+.vscode/
