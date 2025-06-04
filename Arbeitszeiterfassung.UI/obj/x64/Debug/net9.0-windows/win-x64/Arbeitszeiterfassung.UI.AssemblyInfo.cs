@@ -11,13 +11,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Arbeitszeiterfassung.DAL")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Arbeitszeiterfassung.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d65cca8196a5c82934ce3c2d9d5566b73a6c6fb")]
-[assembly: System.Reflection.AssemblyProductAttribute("Arbeitszeiterfassung.DAL")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Arbeitszeiterfassung.DAL")]
+[assembly: System.Reflection.AssemblyProductAttribute("Arbeitszeiterfassung.UI")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Arbeitszeiterfassung.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
 

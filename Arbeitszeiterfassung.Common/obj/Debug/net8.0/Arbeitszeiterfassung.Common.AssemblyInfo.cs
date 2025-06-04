@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Arbeitszeiterfassung.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d65cca8196a5c82934ce3c2d9d5566b73a6c6fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Arbeitszeiterfassung.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Arbeitszeiterfassung.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
