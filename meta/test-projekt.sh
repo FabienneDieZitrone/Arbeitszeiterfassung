@@ -1,0 +1,178 @@
+#!/bin/bash
+# ---
+# title: Test-Skript für Projektinitialisierung
+# version: 1.0
+# lastUpdated: 26.01.2025
+# author: Tanja Trella
+# status: Final
+# file: /app/AZE/test-projekt.sh
+# description: Skript zum Testen der Projektstruktur und Abhängigkeiten
+# ---
+
+echo "======================================"
+echo "Arbeitszeiterfassung Projekt Test"
+echo "======================================"
+echo ""
+
+# Farben für Ausgabe
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Basis-Verzeichnis
+BASE_DIR="/app/AZE/Arbeitszeiterfassung"
+
+# Funktion für Erfolg/Fehler-Ausgabe
+check_result() {
+    if [ $1 -eq 0 ]; then
+        echo -e "${GREEN}✓ $2${NC}"
+    else
+        echo -e "${RED}✗ $2${NC}"
+        ERRORS=$((ERRORS + 1))
+    fi
+}
+
+# Fehler-Zähler
+ERRORS=0
+
+# 1. Prüfe Projektstruktur
+echo -e "${YELLOW}1. Prüfe Projektstruktur...${NC}"
+
+# Prüfe Hauptverzeichnis
+if [ -d "$BASE_DIR" ]; then
+    check_result 0 "Hauptverzeichnis existiert"
+else
+    check_result 1 "Hauptverzeichnis fehlt"
+    echo -e "${RED}Abbruch: Projekt wurde noch nicht initialisiert!${NC}"
+    echo "Führen Sie zuerst aus: bash /app/AZE/init-projekt.sh"
+    exit 1
+fi
+
+cd "$BASE_DIR"
+
+# Prüfe Solution-Datei
+test -f "Arbeitszeiterfassung.sln"
+check_result $? "Solution-Datei vorhanden"
+
+# Prüfe Projekte
+for proj in "Common" "DAL" "BLL" "UI" "Tests"; do
+    test -d "Arbeitszeiterfassung.$proj"
+    check_result $? "Projekt Arbeitszeiterfassung.$proj existiert"
+done
+
+echo ""
+
+# 2. Prüfe Projektverweise
+echo -e "${YELLOW}2. Prüfe Projektverweise...${NC}"
+
+# DAL sollte Common referenzieren
+grep -q "Arbeitszeiterfassung.Common" "Arbeitszeiterfassung.DAL/Arbeitszeiterfassung.DAL.csproj" 2>/dev/null
+check_result $? "DAL referenziert Common"
+
+# BLL sollte Common und DAL referenzieren
+grep -q "Arbeitszeiterfassung.Common" "Arbeitszeiterfassung.BLL/Arbeitszeiterfassung.BLL.csproj" 2>/dev/null
+check_result $? "BLL referenziert Common"
+grep -q "Arbeitszeiterfassung.DAL" "Arbeitszeiterfassung.BLL/Arbeitszeiterfassung.BLL.csproj" 2>/dev/null
+check_result $? "BLL referenziert DAL"
+
+# UI sollte alle referenzieren
+grep -q "Arbeitszeiterfassung.Common" "Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj" 2>/dev/null
+check_result $? "UI referenziert Common"
+grep -q "Arbeitszeiterfassung.DAL" "Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj" 2>/dev/null
+check_result $? "UI referenziert DAL"
+grep -q "Arbeitszeiterfassung.BLL" "Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj" 2>/dev/null
+check_result $? "UI referenziert BLL"
+
+echo ""
+
+# 3. Prüfe Konfigurationsdateien
+echo -e "${YELLOW}3. Prüfe Konfigurationsdateien...${NC}"
+
+test -f "Arbeitszeiterfassung.UI/appsettings.json"
+check_result $? "appsettings.json vorhanden"
+
+test -f "Arbeitszeiterfassung.UI/standorte.json"
+check_result $? "standorte.json vorhanden"
+
+test -f ".gitignore"
+check_result $? ".gitignore vorhanden"
+
+echo ""
+
+# 4. Prüfe NuGet-Pakete
+echo -e "${YELLOW}4. Prüfe wichtige NuGet-Pakete...${NC}"
+
+# Entity Framework in DAL
+grep -q "Microsoft.EntityFrameworkCore" "Arbeitszeiterfassung.DAL/Arbeitszeiterfassung.DAL.csproj" 2>/dev/null
+check_result $? "Entity Framework Core in DAL"
+
+# Configuration in Common
+grep -q "Microsoft.Extensions.Configuration" "Arbeitszeiterfassung.Common/Arbeitszeiterfassung.Common.csproj" 2>/dev/null
+check_result $? "Configuration Extensions in Common"
+
+# Test Framework
+grep -q "xunit" "Arbeitszeiterfassung.Tests/Arbeitszeiterfassung.Tests.csproj" 2>/dev/null
+check_result $? "xUnit in Tests"
+
+echo ""
+
+# 5. Versuche Build
+echo -e "${YELLOW}5. Teste Build...${NC}"
+
+dotnet build --no-restore > /dev/null 2>&1
+BUILD_RESULT=$?
+check_result $BUILD_RESULT "Solution lässt sich bauen"
+
+if [ $BUILD_RESULT -eq 0 ]; then
+    # Prüfe ob alle Projekte gebaut wurden
+    for proj in "Common" "DAL" "BLL" "UI" "Tests"; do
+        test -f "Arbeitszeiterfassung.$proj/bin/Debug/net9.0*/Arbeitszeiterfassung.$proj.dll" 2>/dev/null || \
+        test -f "Arbeitszeiterfassung.$proj/bin/Debug/net9.0-windows/Arbeitszeiterfassung.$proj.dll" 2>/dev/null
+        check_result $? "Arbeitszeiterfassung.$proj wurde gebaut"
+    done
+fi
+
+echo ""
+
+# 6. Prüfe Ordnerstruktur
+echo -e "${YELLOW}6. Prüfe Ordnerstruktur...${NC}"
+
+# Common
+for folder in "Configuration" "Enums" "Extensions" "Helpers" "Models"; do
+    test -d "Arbeitszeiterfassung.Common/$folder"
+    check_result $? "Common/$folder existiert"
+done
+
+# DAL
+for folder in "Context" "Entities" "Migrations" "Repositories"; do
+    test -d "Arbeitszeiterfassung.DAL/$folder"
+    check_result $? "DAL/$folder existiert"
+done
+
+echo ""
+
+# 7. Zusammenfassung
+echo -e "${YELLOW}======================================"
+echo "Test-Zusammenfassung"
+echo -e "======================================${NC}"
+
+if [ $ERRORS -eq 0 ]; then
+    echo -e "${GREEN}✓ Alle Tests bestanden!${NC}"
+    echo ""
+    echo "Das Projekt ist bereit für die Entwicklung."
+    echo "Nächster Schritt: Implementierung des Datenbankdesigns"
+    echo "Verwenden Sie: /app/AZE/Prompts/Schritt_1_2_Datenbankdesign.md"
+else
+    echo -e "${RED}✗ $ERRORS Test(s) fehlgeschlagen!${NC}"
+    echo ""
+    echo "Bitte prüfen Sie die Fehler und führen Sie ggf."
+    echo "das Initialisierungsskript erneut aus:"
+    echo "bash /app/AZE/init-projekt.sh"
+fi
+
+echo ""
+echo "Projektverzeichnis: $BASE_DIR"
+
+# Exit mit Fehlercode wenn Tests fehlgeschlagen
+exit $ERRORS
