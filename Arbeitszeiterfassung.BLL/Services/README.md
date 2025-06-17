@@ -11,3 +11,5 @@ Beschreibung: Enthält alle Geschäftslogik-Services des Projekts.
 # Services-Ordner
 
 Alle BLL-Serviceklassen, z.B. für Authentifizierung, Zeiterfassung, Validierung etc.
+
+Derzeit sind hier nur Platzhalter vorhanden. Die konkrete Geschäftslogik muss noch implementiert werden.
