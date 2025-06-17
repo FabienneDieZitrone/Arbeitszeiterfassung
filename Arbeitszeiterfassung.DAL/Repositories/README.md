@@ -11,3 +11,5 @@ Beschreibung: Repository-Implementierungen für den Datenzugriff.
 # Repositories-Ordner
 
 Alle generischen und spezifischen Repositories für den Datenzugriff.
+
+Die Implementierung wird erst mit dem finalen Datenbankschema erstellt. Bis dahin enthält dieser Ordner nur Platzhalterdateien.
