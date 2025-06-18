@@ -12,3 +12,9 @@ obj/
 
 # VSCode settings
 .vscode/
+obj/
+bin/
+*.user
+*.suo
+*.cache
+*.AssemblyInfo.cs
