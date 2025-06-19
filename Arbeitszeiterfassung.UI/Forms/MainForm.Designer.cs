@@ -48,7 +48,9 @@ namespace Arbeitszeiterfassung.UI.Forms
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::Arbeitszeiterfassung.UI.Properties.Resources.mp_logo;
+            // Das Ressourcenfile wurde noch nicht eingebunden,
+            // daher wird das Bild vorerst nicht gesetzt.
+            this.pictureBoxLogo.Image = null;
             this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(120, 48);
