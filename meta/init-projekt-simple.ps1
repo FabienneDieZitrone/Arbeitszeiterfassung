@@ -40,23 +40,23 @@ Write-Host ""
 Write-Host "Erstelle Projekte..." -ForegroundColor Yellow
 
 Write-Host "- Common Library" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
 dotnet sln add Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj
 
 Write-Host "- Data Access Layer" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
 dotnet sln add Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj
 
 Write-Host "- Business Logic Layer" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
 dotnet sln add Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj
 
 Write-Host "- User Interface" -ForegroundColor Cyan
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0-windows
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0-windows
 dotnet sln add Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 
 Write-Host "- Tests" -ForegroundColor Cyan
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
 dotnet sln add Arbeitszeiterfassung.Tests\Arbeitszeiterfassung.Tests.csproj
 
 # Projektverweise
@@ -90,23 +90,23 @@ Write-Host "Installiere NuGet-Pakete..." -ForegroundColor Yellow
 
 Write-Host "- Entity Framework für DAL" -ForegroundColor Gray
 Set-Location Arbeitszeiterfassung.DAL
-dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0-preview.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
 Set-Location ..
 
 Write-Host "- Configuration für Common" -ForegroundColor Gray
 Set-Location Arbeitszeiterfassung.Common
-dotnet add package Microsoft.Extensions.Configuration --version 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json --version 9.0.0
-dotnet add package Microsoft.Extensions.Logging --version 9.0.0
+dotnet add package Microsoft.Extensions.Configuration --version 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json --version 8.0.0
+dotnet add package Microsoft.Extensions.Logging --version 8.0.0
 Set-Location ..
 
 Write-Host "- DI Container für UI" -ForegroundColor Gray
 Set-Location Arbeitszeiterfassung.UI
-dotnet add package Microsoft.Extensions.DependencyInjection --version 9.0.0
-dotnet add package Microsoft.Extensions.Hosting --version 9.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection --version 8.0.0
+dotnet add package Microsoft.Extensions.Hosting --version 8.0.0
 Set-Location ..
 
 Write-Host "- Test-Pakete" -ForegroundColor Gray
@@ -155,7 +155,7 @@ $appsettings = [PSCustomObject]@{
     }
     DatabaseSettings = [PSCustomObject]@{
         Provider = "MySQL"
-        ConnectionString = "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;"
+        ConnectionString = "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;"
         CommandTimeout = 30
         EnableSensitiveDataLogging = $false
     }
