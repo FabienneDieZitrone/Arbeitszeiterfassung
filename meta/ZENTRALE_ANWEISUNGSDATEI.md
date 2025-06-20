@@ -27,8 +27,8 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 4. **Zusammenfassung_Arbeitsplan.md** - Executive Summary
 
 ### Nächste Schritte:
-- **Aktuell**: Schritt 1.1 - Projekt-Setup und Verzeichnisstruktur
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
+- **Aktuell**: Schritt 1.2 - Datenbankdesign
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_1_2_Datenbankdesign.md`
 
 ## Entwicklungsrichtlinien
 
