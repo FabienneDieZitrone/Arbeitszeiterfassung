@@ -22,6 +22,13 @@ Dieses Projekt implementiert eine **standalone Arbeitszeiterfassungsanwendung** 
 - MySQL/MariaDB Server
 - Visual Studio 2022 oder VS Code
 
+#### .NET SDK unter Linux installieren
+Auf Ubuntu-Systemen kann das benötigte SDK mit `apt` installiert werden:
+```bash
+sudo apt-get update
+sudo apt-get install -y dotnet-sdk-8.0
+```
+
 ### Projekt initialisieren
 
 **Windows (PowerShell):**
@@ -37,6 +44,10 @@ bash init-projekt.sh
 ### Projekt testen
 ```bash
 bash test-projekt.sh
+```
+Sollte das Projekt in einem anderen Verzeichnis liegen, kann das Basisverzeichnis beim Aufruf angegeben werden:
+```bash
+BASE_DIR=$(pwd) bash meta/test-projekt.sh
 ```
 
 ## 📁 Projektstruktur
