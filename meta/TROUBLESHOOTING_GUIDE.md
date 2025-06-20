@@ -38,7 +38,12 @@ error MSB3644: The reference assemblies for .NETCore,Version=v9.0 were not found
    ```bash
    winget install Microsoft.DotNet.SDK.9
    ```
-3. Starten Sie Visual Studio/VS Code neu
+3. Unter Linux kann das SDK mit `apt` installiert werden:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y dotnet-sdk-8.0
+   ```
+4. Starten Sie Visual Studio/VS Code neu
 
 ### Problem: NuGet-Pakete können nicht wiederhergestellt werden
 **Symptome**: 
