@@ -1,6 +1,6 @@
 ---
 title: Prompt für Schritt 1.3 - Konfigurationsmanagement
-description: Detaillierter Prompt zur Einrichtung von App.config, standorte.json und Basis-Konfiguration
+description: Detaillierter Prompt zur Einrichtung von App.config und Basis-Konfiguration. Standortdaten und Logo werden aus der Datenbank geladen
 author: Tanja Trella
 version: 1.0
 lastUpdated: 26.01.2025
@@ -10,7 +10,7 @@ category: Entwicklung
 # Prompt für Schritt 1.3: Konfigurationsmanagement
 
 ## Aufgabe
-Erstelle das vollständige Konfigurationsmanagement für die Arbeitszeiterfassungsanwendung mit App.config, standorte.json und einem flexiblen Konfigurationssystem.
+Erstelle das vollständige Konfigurationsmanagement für die Arbeitszeiterfassungsanwendung mit App.config. Standortliste und Logo sollen aus der Datenbank geladen werden und können dynamisch aktualisiert werden.
 
 ## Zu erstellende Komponenten
 
@@ -28,10 +28,9 @@ Erstelle das vollständige Konfigurationsmanagement für die Arbeitszeiterfassun
 </configuration>
 ```
 
-### 2. standorte.json
-Vollständige Standortkonfiguration mit:
-- Standortdefinitionen
-- IP-Range Mappings
+### 2. Tabelle "Standorte"
+Alle Standorte werden in einer Datenbanktabelle gepflegt:
+- Standortdefinitionen inkl. IP-Range Mappings
 - Home-Office Einstellungen
 - VPN-Konfiguration
 
@@ -140,75 +139,13 @@ public class NotificationSettings
 - Roaming Profile Support
 - Import/Export Funktionalität
 
-## Beispiel standorte.json:
-```json
-{
-  "version": "1.0",
-  "lastModified": "2025-01-26T10:00:00",
-  "standorte": [
-    {
-      "id": 1,
-      "name": "Hauptsitz Berlin",
-      "kuerzel": "BER",
-      "adresse": {
-        "strasse": "Beispielstraße 1",
-        "plz": "10115",
-        "ort": "Berlin"
-      },
-      "ipRanges": [
-        {
-          "start": "192.168.1.1",
-          "end": "192.168.1.254",
-          "subnet": "192.168.1.0/24",
-          "beschreibung": "Hauptnetzwerk"
-        }
-      ],
-      "telefon": "+49 30 12345678",
-      "email": "berlin@mikropartner.de",
-      "aktiv": true
-    },
-    {
-      "id": 2,
-      "name": "Filiale Hamburg",
-      "kuerzel": "HAM",
-      "adresse": {
-        "strasse": "Musterweg 2",
-        "plz": "20095",
-        "ort": "Hamburg"
-      },
-      "ipRanges": [
-        {
-          "start": "192.168.2.1",
-          "end": "192.168.2.254",
-          "subnet": "192.168.2.0/24",
-          "beschreibung": "Filial-Netzwerk"
-        }
-      ],
-      "telefon": "+49 40 87654321",
-      "email": "hamburg@mikropartner.de",
-      "aktiv": true
-    }
-  ],
-  "homeOffice": {
-    "enabled": true,
-    "requiresVPN": true,
-    "vpnRanges": [
-      {
-        "start": "10.0.0.1",
-        "end": "10.0.0.254",
-        "subnet": "10.0.0.0/24",
-        "provider": "OpenVPN"
-      }
-    ],
-    "maxTageProWoche": 3
-  },
-  "netzwerkEinstellungen": {
-    "timeoutSeconds": 5,
-    "retryCount": 3,
-    "checkInterval": 30
-  }
-}
-```
+## Beispiel-Datensatz für Tabelle "Standorte"
+In der Datenbank können beispielhaft zwei Standorte hinterlegt werden:
+
+| Id | Name              | Kürzel | Subnetz        |
+|----|------------------|---------|---------------|
+| 1  | Hauptsitz Berlin | BER     | 192.168.1.0/24|
+| 2  | Filiale Hamburg  | HAM     | 192.168.2.0/24|
 
 ## Benötigte Dateien
 - Projektstruktur aus Schritt 1.1
@@ -217,8 +154,8 @@ public class NotificationSettings
 ## Erwartete Ausgabe
 ```
 Configuration/
-├── standorte.json
-├── standorte.schema.json
+├── Datenbankskripte/
+│   └── seed_standorte.sql
 Common/
 ├── Configuration/
 │   ├── ConfigurationManager.cs

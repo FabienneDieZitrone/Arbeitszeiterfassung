@@ -13,7 +13,7 @@ Write-Host "Arbeitszeiterfassung Projekt Setup" -ForegroundColor Cyan
 Write-Host "======================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Prüfe ob .NET 9.0 installiert ist
+# Prüfe ob .NET 8.0 installiert ist
 Write-Host "Prüfe .NET SDK Version..." -ForegroundColor Yellow
 try {
     $dotnetVersion = dotnet --version
@@ -21,7 +21,7 @@ try {
 }
 catch {
     Write-Host "❌ FEHLER: .NET SDK ist nicht installiert!" -ForegroundColor Red
-    Write-Host "Bitte installieren Sie .NET 9.0 SDK von: https://dotnet.microsoft.com/download/dotnet/9.0" -ForegroundColor Yellow
+    Write-Host "Bitte installieren Sie .NET 8.0 SDK von: https://dotnet.microsoft.com/download/dotnet/8.0" -ForegroundColor Yellow
     exit 1
 }
 

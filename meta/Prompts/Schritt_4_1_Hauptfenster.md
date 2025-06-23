@@ -133,7 +133,7 @@ UI/
 │   ├── UIHelper.cs
 │   └── ResourceManager.cs
 └── Resources/
-    ├── mp-logo.png
+    ├── [Logo wird aus Datenbank geladen]
     ├── icons/
     └── strings.resx
 ```

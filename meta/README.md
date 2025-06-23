@@ -67,7 +67,7 @@ AZE/
 - **Framework**: .NET 8.0 mit C# 12.0
 - **UI**: Windows Forms
 - **Datenbank**: MySQL/MariaDB (Haupt) + SQLite (Offline)
-- **ORM**: Entity Framework Core 9.0
+- **ORM**: Entity Framework Core 8.0
 - **Architektur**: 3-Schichten (UI, BLL, DAL)
 - **Testing**: xUnit + Moq + FluentAssertions
 

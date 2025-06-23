@@ -42,7 +42,7 @@
       Beschreibung: Kurze Beschreibung des Dateiinhaltes (nur bei Dateien die keine Dokumentationsdateien sind, die sich anfangs immer selbst beschreiben)
 
 ### Umgebung
-     Mit dem installierten .NET SDK 9.0.204 und dem Ziel-Framework „net9.0“ ist die standardmäßig genutzte C#-Sprache Version 13.0
+     Mit dem installierten .NET SDK 8.0.100 und dem Ziel-Framework „net8.0“ ist die standardmäßig genutzte C#-Sprache Version 12.0
 
 ## Aktuelle Aufgabe und oberste Priorität
     Hilf mir das Projekt erfolgreich umzusetzen indem Du die nachfolgende Punkte bearbeitest:
@@ -58,7 +58,7 @@
 Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungsträger mit C# 7.3
 
 ### 1.2 Technische Rahmenbedingungen
-- **Programmiersprache**: Mit dem installierten .NET SDK 9.0.204 und dem Ziel-Framework „net9.0“ ist die standardmäßig genutzte C#-Sprache Version 13.0.
+- **Programmiersprache**: Mit dem installierten .NET SDK 8.0.100 und dem Ziel-Framework „net8.0“ ist die standardmäßig genutzte C#-Sprache Version 12.0.
 - **Datenbank**: db10454681-aze (Passwort: Start.321)
 - **Deployment**: Standalone-Anwendung ohne externe Abhängigkeiten
 - **Netzwerk**: Offline-Fähigkeit mit automatischer Synchronisation

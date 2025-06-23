@@ -56,7 +56,7 @@ Für die ersten 5 kritischen Schritte wurden ausführliche Prompts erstellt:
 ```
 Aufgabe: Erstelle die Projektstruktur für die Arbeitszeiterfassung gemäß Schritt 1.1
 Kontext: Verwende die Informationen aus ZENTRALE_ANWEISUNGSDATEI.md im AZE-Verzeichnis
-Technologie: .NET 9.0, C# 13.0, Windows Forms
+Technologie: .NET 8.0, C# 12.0, Windows Forms
 ```
 
 ### Option 3: Spezifischen Schritt ausführen
@@ -83,7 +83,7 @@ Jeder Prompt ist selbsterklärend und enthält alle benötigten Informationen.
 
 ## Technische Eckdaten
 
-- **Framework**: .NET 9.0 (C# 13.0)
+- **Framework**: .NET 8.0 (C# 12.0)
 - **UI**: Windows Forms
 - **Datenbank**: MySQL/MariaDB + SQLite
 - **Architektur**: 3-Schichten
@@ -103,9 +103,9 @@ dotnet new classlib -n Arbeitszeiterfassung.Common
 dotnet sln add **/*.csproj
 
 # NuGet-Pakete installieren
-dotnet add package Microsoft.EntityFrameworkCore --version 9.*
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.*
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.*
+dotnet add package Microsoft.EntityFrameworkCore --version 8.*
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.*
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.*
 ```
 
 ## Kontakt bei Fragen

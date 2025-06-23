@@ -15,7 +15,7 @@ Diese Checkliste führt Sie durch alle 19 Entwicklungsschritte mit konkreten Pr�
 ## ✅ Phase 1: Projektinitialisierung und Grundstruktur
 
 ### ☐ Schritt 1.1: Projekt-Setup und Verzeichnisstruktur
-- [ ] .NET 9.0 SDK installiert
+- [ ] .NET 8.0 SDK installiert
 - [ ] Projekt mit `init-projekt.sh` initialisiert
 - [ ] Solution erfolgreich erstellt
 - [ ] Alle 5 Projekte angelegt (Common, DAL, BLL, UI, Tests)

@@ -14,11 +14,11 @@ echo "Arbeitszeiterfassung Projekt Setup"
 echo "======================================"
 echo ""
 
-# Prüfe ob .NET 9.0 installiert ist
+# Prüfe ob .NET 8.0 installiert ist
 echo "Prüfe .NET SDK Version..."
 if ! command -v dotnet &> /dev/null; then
     echo "❌ FEHLER: .NET SDK ist nicht installiert!"
-    echo "Bitte installieren Sie .NET 9.0 SDK von: https://dotnet.microsoft.com/download/dotnet/9.0"
+    echo "Bitte installieren Sie .NET 8.0 SDK von: https://dotnet.microsoft.com/download/dotnet/8.0"
     exit 1
 fi
 
@@ -102,25 +102,25 @@ echo "Installiere NuGet-Pakete..."
 
 # Entity Framework Core für DAL
 cd Arbeitszeiterfassung.DAL
-dotnet add package Microsoft.EntityFrameworkCore -v 9.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 9.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql -v 9.0.0-preview.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools -v 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore -v 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 8.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql -v 8.0.0-preview.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools -v 8.0.0
 cd ..
 
 # Configuration für Common
 cd Arbeitszeiterfassung.Common
-dotnet add package Microsoft.Extensions.Configuration -v 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json -v 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Binder -v 9.0.0
-dotnet add package Microsoft.Extensions.Logging -v 9.0.0
-dotnet add package System.Security.Cryptography.ProtectedData -v 9.0.0
+dotnet add package Microsoft.Extensions.Configuration -v 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json -v 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Binder -v 8.0.0
+dotnet add package Microsoft.Extensions.Logging -v 8.0.0
+dotnet add package System.Security.Cryptography.ProtectedData -v 8.0.0
 cd ..
 
 # Windows Forms Erweiterungen für UI
 cd Arbeitszeiterfassung.UI
-dotnet add package Microsoft.Extensions.DependencyInjection -v 9.0.0
-dotnet add package Microsoft.Extensions.Hosting -v 9.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection -v 8.0.0
+dotnet add package Microsoft.Extensions.Hosting -v 8.0.0
 cd ..
 
 # Test-Pakete

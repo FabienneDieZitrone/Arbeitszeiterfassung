@@ -12,7 +12,7 @@ echo 2. .NET SDK:
 dotnet --version >nul 2>&1
 if errorlevel 1 (
     echo    FEHLER: .NET SDK nicht gefunden
-    echo    Installation: winget install Microsoft.DotNet.SDK.9
+    echo    Installation: winget install Microsoft.DotNet.SDK.8
     echo.
     goto :mysql
 ) else (
@@ -61,7 +61,7 @@ echo ======================================
 echo.
 echo Falls FEHLER angezeigt wurden, installieren Sie:
 echo.
-echo   winget install Microsoft.DotNet.SDK.9
+echo   winget install Microsoft.DotNet.SDK.8
 echo   winget install Git.Git  
 echo   winget install Oracle.MySQL
 echo   winget install Microsoft.VisualStudioCode

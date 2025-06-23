@@ -13,7 +13,7 @@ Write-Host "Arbeitszeiterfassung Projekt Setup" -ForegroundColor Cyan
 Write-Host "======================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Prüfe ob .NET 9.0 installiert ist
+# Prüfe ob .NET 8.0 installiert ist
 Write-Host "Prüfe .NET SDK Version..." -ForegroundColor Yellow
 try {
     $dotnetVersion = dotnet --version
@@ -21,7 +21,7 @@ try {
 }
 catch {
     Write-Host "❌ FEHLER: .NET SDK ist nicht installiert!" -ForegroundColor Red
-    Write-Host "Bitte installieren Sie .NET 9.0 SDK von: https://dotnet.microsoft.com/download/dotnet/9.0" -ForegroundColor Yellow
+    Write-Host "Bitte installieren Sie .NET 8.0 SDK von: https://dotnet.microsoft.com/download/dotnet/8.0" -ForegroundColor Yellow
     exit 1
 }
 
@@ -104,25 +104,25 @@ Write-Host "Installiere NuGet-Pakete..." -ForegroundColor Yellow
 
 # Entity Framework Core für DAL
 Set-Location Arbeitszeiterfassung.DAL
-dotnet add package Microsoft.EntityFrameworkCore -v 9.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 9.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql -v 9.0.0-preview.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools -v 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore -v 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 8.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql -v 8.0.0-preview.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools -v 8.0.0
 Set-Location ..
 
 # Configuration für Common
 Set-Location Arbeitszeiterfassung.Common
-dotnet add package Microsoft.Extensions.Configuration -v 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json -v 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Binder -v 9.0.0
-dotnet add package Microsoft.Extensions.Logging -v 9.0.0
-dotnet add package System.Security.Cryptography.ProtectedData -v 9.0.0
+dotnet add package Microsoft.Extensions.Configuration -v 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json -v 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Binder -v 8.0.0
+dotnet add package Microsoft.Extensions.Logging -v 8.0.0
+dotnet add package System.Security.Cryptography.ProtectedData -v 8.0.0
 Set-Location ..
 
 # Windows Forms Erweiterungen für UI
 Set-Location Arbeitszeiterfassung.UI
-dotnet add package Microsoft.Extensions.DependencyInjection -v 9.0.0
-dotnet add package Microsoft.Extensions.Hosting -v 9.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection -v 8.0.0
+dotnet add package Microsoft.Extensions.Hosting -v 8.0.0
 Set-Location ..
 
 # Test-Pakete

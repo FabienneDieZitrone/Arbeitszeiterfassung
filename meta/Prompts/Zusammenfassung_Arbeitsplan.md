@@ -62,10 +62,10 @@ Ich habe einen detaillierten Arbeitsplan für die Entwicklung einer Arbeitszeite
 
 ## Technologie-Stack
 
-- **Framework**: .NET 9.0 mit C# 13.0
+- **Framework**: .NET 8.0 mit C# 12.0
 - **UI**: Windows Forms
 - **Datenbank**: MySQL/MariaDB + SQLite (Offline)
-- **ORM**: Entity Framework Core 9.x
+- **ORM**: Entity Framework Core 8.x
 - **Architektur**: 3-Schichten (UI, BLL, DAL)
 
 ## Kernfunktionen

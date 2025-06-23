@@ -417,7 +417,7 @@ public class UIAutomationTests : IDisposable
     public UIAutomationTests()
     {
         // Starte Anwendung
-        _app = Application.Launch(@"..\..\..\..\Arbeitszeiterfassung.UI\bin\Debug\net9.0-windows\Arbeitszeiterfassung.UI.exe");
+        _app = Application.Launch(@"..\..\..\..\Arbeitszeiterfassung.UI\bin\Debug\net8.0-windows\Arbeitszeiterfassung.UI.exe");
         _mainWindow = _app.GetMainWindow();
     }
     
@@ -592,7 +592,7 @@ stages:
     steps:
     - task: UseDotNet@2
       inputs:
-        version: '9.0.x'
+        version: '8.0.x'
     
     - task: DotNetCoreCLI@2
       displayName: 'Restore packages'

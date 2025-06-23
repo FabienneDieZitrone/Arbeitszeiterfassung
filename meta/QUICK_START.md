@@ -90,7 +90,7 @@ ls -1 Prompts/
 ## ⚡ Schnell-Info
 
 - **Projekt**: Arbeitszeiterfassung für Bildungsträger
-- **Tech-Stack**: .NET 9.0, C# 13.0, Windows Forms
+- **Tech-Stack**: .NET 8.0, C# 12.0, Windows Forms
 - **Aktueller Schritt**: 1.1 - Projekt-Setup
 - **Geschätzte Zeit**: 30 Minuten
 - **Nächster Schritt**: 1.2 - Datenbankdesign

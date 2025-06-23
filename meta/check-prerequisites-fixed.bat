@@ -44,7 +44,7 @@ echo 2. .NET SDK:
 where dotnet >nul 2>&1
 if errorlevel 1 (
     echo - .NET SDK nicht gefunden
-    echo   Installation: winget install Microsoft.DotNet.SDK.9
+    echo   Installation: winget install Microsoft.DotNet.SDK.8
     set /a ERRORS+=1
 ) else (
     echo + .NET SDK gefunden
@@ -54,14 +54,14 @@ if errorlevel 1 (
         echo   Version nicht ermittelbar
     )
     
-    REM Prüfe auf .NET 9.0
-    dotnet --list-sdks 2>nul | find "9.0" >nul 2>&1
+    REM Prüfe auf .NET 8.0
+    dotnet --list-sdks 2>nul | find "8.0" >nul 2>&1
     if errorlevel 1 (
-        echo   ! .NET 9.0 SDK nicht gefunden
-        echo     Installieren Sie: winget install Microsoft.DotNet.SDK.9
+        echo   ! .NET 8.0 SDK nicht gefunden
+        echo     Installieren Sie: winget install Microsoft.DotNet.SDK.8
         set /a WARNINGS+=1
     ) else (
-        echo   + .NET 9.0 SDK verfuegbar
+        echo   + .NET 8.0 SDK verfuegbar
     )
 )
 echo.
@@ -177,7 +177,7 @@ if %ERRORS%==0 (
     if %ERRORS% geq 1 (
         echo.
         echo Schnell-Installation:
-        echo   winget install Microsoft.DotNet.SDK.9
+        echo   winget install Microsoft.DotNet.SDK.8
         echo   winget install Git.Git
         echo   winget install Oracle.MySQL
         echo   winget install Microsoft.VisualStudioCode
