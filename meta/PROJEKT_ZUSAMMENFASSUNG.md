@@ -39,8 +39,8 @@ Für die ersten 5 kritischen Schritte wurden ausführliche Prompts erstellt:
 ## Aktueller Status
 
 **Phase**: Projektinitialisierung
-**Nächster Schritt**: 1.2 - Datenbankdesign
-**Status**: Schritt 1.1 abgeschlossen
+**Nächster Schritt**: 1.1 - Projekt-Setup und Verzeichnisstruktur
+**Status**: Bereit zur Implementierung
 
 ## Wie geht es weiter?
 
@@ -49,12 +49,12 @@ Für die ersten 5 kritischen Schritte wurden ausführliche Prompts erstellt:
 # In neuem Chat:
 # 1. Diese Zusammenfassung übergeben
 # 2. ZENTRALE_ANWEISUNGSDATEI.md aus /app/AZE/ übergeben
-# 3. Prompt aus /app/AZE/Prompts/Schritt_1_2_Datenbankdesign.md ausführen
+# 3. Prompt aus /app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md ausführen
 ```
 
 ### Option 2: Schnellstart
 ```
-Aufgabe: Implementiere das Datenbankdesign gemäß Schritt 1.2
+Aufgabe: Erstelle die Projektstruktur für die Arbeitszeiterfassung gemäß Schritt 1.1
 Kontext: Verwende die Informationen aus ZENTRALE_ANWEISUNGSDATEI.md im AZE-Verzeichnis
 Technologie: .NET 9.0, C# 13.0, Windows Forms
 ```
