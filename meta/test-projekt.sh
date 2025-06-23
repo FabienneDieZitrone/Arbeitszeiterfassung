@@ -20,8 +20,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Basis-Verzeichnis
-BASE_DIR="/app/AZE/Arbeitszeiterfassung"
+# Basis-Verzeichnis (überschreibbar per Umgebungsvariable BASE_DIR)
+BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 
 # Funktion für Erfolg/Fehler-Ausgabe
 check_result() {
@@ -120,16 +120,30 @@ echo ""
 # 5. Versuche Build
 echo -e "${YELLOW}5. Teste Build...${NC}"
 
-dotnet build --no-restore > /dev/null 2>&1
-BUILD_RESULT=$?
-check_result $BUILD_RESULT "Solution lässt sich bauen"
+# Baue alle Projekte außer der Windows-Forms-UI, da das WindowsDesktop SDK unter Linux nicht verfügbar ist
+BUILD_RESULT=0
+for proj in "Common" "DAL" "BLL" "Tests"; do
+    dotnet build "Arbeitszeiterfassung.$proj/Arbeitszeiterfassung.$proj.csproj" -p:EnableWindowsTargeting=true > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        check_result 0 "Arbeitszeiterfassung.$proj lässt sich bauen"
+    else
+        check_result 1 "Arbeitszeiterfassung.$proj lässt sich bauen"
+        BUILD_RESULT=1
+    fi
+done
+
+# UI Projekt wird nur getestet, ob die Projektdatei existiert
+test -f "Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj"
+check_result $? "UI-Projekt vorhanden"
 
 if [ $BUILD_RESULT -eq 0 ]; then
-    # Prüfe ob alle Projekte gebaut wurden
-    for proj in "Common" "DAL" "BLL" "UI" "Tests"; do
-        test -f "Arbeitszeiterfassung.$proj/bin/Debug/net9.0*/Arbeitszeiterfassung.$proj.dll" 2>/dev/null || \
-        test -f "Arbeitszeiterfassung.$proj/bin/Debug/net9.0-windows/Arbeitszeiterfassung.$proj.dll" 2>/dev/null
-        check_result $? "Arbeitszeiterfassung.$proj wurde gebaut"
+    # Prüfe ob alle Bibliotheken erzeugt wurden
+    for proj in "Common" "DAL" "BLL" "Tests"; do
+        if find Arbeitszeiterfassung.$proj/bin/Debug -name "Arbeitszeiterfassung.$proj.dll" | grep -q .; then
+            check_result 0 "Arbeitszeiterfassung.$proj wurde gebaut"
+        else
+            check_result 1 "Arbeitszeiterfassung.$proj wurde gebaut"
+        fi
     done
 fi
 
@@ -176,3 +190,4 @@ echo "Projektverzeichnis: $BASE_DIR"
 
 # Exit mit Fehlercode wenn Tests fehlgeschlagen
 exit $ERRORS
+

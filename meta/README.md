@@ -18,7 +18,7 @@ Dieses Projekt implementiert eine **standalone Arbeitszeiterfassungsanwendung** 
 
 ### Voraussetzungen
 - Windows 10/11 (64-bit)
-- .NET 9.0 SDK
+- .NET 8.0 SDK
 - MySQL/MariaDB Server
 - Visual Studio 2022 oder VS Code
 
@@ -64,7 +64,7 @@ AZE/
 
 ## 🛠️ Technologie-Stack
 
-- **Framework**: .NET 9.0 mit C# 13.0
+- **Framework**: .NET 8.0 mit C# 12.0
 - **UI**: Windows Forms
 - **Datenbank**: MySQL/MariaDB (Haupt) + SQLite (Offline)
 - **ORM**: Entity Framework Core 9.0
@@ -142,7 +142,7 @@ Das Projekt folgt einem strukturierten 19-Schritte-Plan:
 
 3. **Datenbank konfigurieren**
    - MySQL/MariaDB installieren
-   - Datenbank `db1045481-aze1` erstellen
+   - Datenbank `db10454681-aze` verwenden
    - Connection String in `appsettings.json` anpassen
 
 4. **Entwicklung starten**

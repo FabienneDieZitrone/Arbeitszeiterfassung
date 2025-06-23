@@ -15,10 +15,10 @@ echo "======================================"
 echo ""
 
 # Standardwerte
-DB_HOST="localhost"
+DB_HOST="wp10454681.Server-he.de"
 DB_PORT="3306"
-DB_NAME="db1045481-aze1"
-DB_USER="root"
+DB_NAME="db10454681-aze"
+DB_USER="db10454681-aze"
 DB_PASS="Start.321"
 
 # Farben für Ausgabe
@@ -176,3 +176,4 @@ echo "Entity Framework Migrations:"
 echo "  cd Arbeitszeiterfassung/Arbeitszeiterfassung.DAL"
 echo "  dotnet ef migrations add InitialCreate"
 echo "  dotnet ef database update"
+
