@@ -27,8 +27,8 @@ cat ZENTRALE_ANWEISUNGSDATEI.md
 
 ### Schritt 3: Nächsten Entwicklungsschritt ausführen
 ```
-Der nächste Schritt ist 1.2 - Datenbankdesign.
-Der Prompt dafür ist in: Prompts/Schritt_1_2_Datenbankdesign.md
+Der nächste Schritt ist 1.1 - Projekt-Setup.
+Der Prompt dafür ist in: Prompts/Schritt_1_1_Projekt_Setup.md
 ```
 
 ## 📋 Checkliste für neue Session
@@ -43,7 +43,7 @@ Der Prompt dafür ist in: Prompts/Schritt_1_2_Datenbankdesign.md
 
 ### Projekt-Setup starten:
 ```
-Erstelle die Projektstruktur gemäß /app/AZE/Prompts/Schritt_1_2_Datenbankdesign.md
+Erstelle die Projektstruktur gemäß /app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md
 ```
 
 ### Datenbank-Modelle erstellen:
@@ -81,7 +81,7 @@ ls -1 Prompts/
 ├── PROJEKT_ZUSAMMENFASSUNG.md
 ├── QUICK_START.md (diese Datei)
 ├── Prompts/
-│   ├── Schritt_1_2_Datenbankdesign.md ← AKTUELL
+│   ├── Schritt_1_1_Projekt_Setup.md ← AKTUELL
 │   ├── Schritt_1_2_Datenbankdesign.md
 │   └── ... (weitere Schritte)
 └── Arbeitszeiterfassung/ ← WIRD ERSTELLT
@@ -91,7 +91,7 @@ ls -1 Prompts/
 
 - **Projekt**: Arbeitszeiterfassung für Bildungsträger
 - **Tech-Stack**: .NET 9.0, C# 13.0, Windows Forms
-- **Aktueller Schritt**: 1.2 - Datenbankdesign
+- **Aktueller Schritt**: 1.1 - Projekt-Setup
 - **Geschätzte Zeit**: 30 Minuten
 - **Nächster Schritt**: 1.2 - Datenbankdesign
 
