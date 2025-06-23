@@ -38,26 +38,26 @@ echo.
 echo Erstelle Projekte...
 
 echo - Common Library
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
 dotnet sln add Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj
 
 echo - Data Access Layer
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
 dotnet sln add Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj
 
 echo - Business Logic Layer
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
 dotnet sln add Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj
 
 echo - User Interface (Windows Forms)
-REM Verwende net9.0 ohne -windows Suffix
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0
+REM Verwende net8.0 ohne -windows Suffix
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0
 
 REM Bearbeite die csproj-Datei für Windows-Unterstützung
 echo ^<Project Sdk="Microsoft.NET.Sdk"^> > temp_ui.csproj
 echo   ^<PropertyGroup^> >> temp_ui.csproj
 echo     ^<OutputType^>WinExe^</OutputType^> >> temp_ui.csproj
-echo     ^<TargetFramework^>net9.0-windows^</TargetFramework^> >> temp_ui.csproj
+echo     ^<TargetFramework^>net8.0-windows^</TargetFramework^> >> temp_ui.csproj
 echo     ^<UseWindowsForms^>true^</UseWindowsForms^> >> temp_ui.csproj
 echo     ^<ImplicitUsings^>enable^</ImplicitUsings^> >> temp_ui.csproj
 echo     ^<Nullable^>enable^</Nullable^> >> temp_ui.csproj
@@ -69,7 +69,7 @@ move temp_ui.csproj Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 dotnet sln add Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 
 echo - Tests
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
 dotnet sln add Arbeitszeiterfassung.Tests\Arbeitszeiterfassung.Tests.csproj
 
 REM Projektverweise (bleibe im BASE_DIR)
@@ -102,21 +102,21 @@ echo Installiere NuGet-Pakete...
 
 echo - Entity Framework fuer DAL
 cd /d "%BASE_DIR%\Arbeitszeiterfassung.DAL"
-dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0-preview.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
 
 echo - Configuration fuer Common
 cd /d "%BASE_DIR%\Arbeitszeiterfassung.Common"
-dotnet add package Microsoft.Extensions.Configuration --version 9.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json --version 9.0.0
-dotnet add package Microsoft.Extensions.Logging --version 9.0.0
+dotnet add package Microsoft.Extensions.Configuration --version 8.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json --version 8.0.0
+dotnet add package Microsoft.Extensions.Logging --version 8.0.0
 
 echo - DI Container fuer UI
 cd /d "%BASE_DIR%\Arbeitszeiterfassung.UI"
-dotnet add package Microsoft.Extensions.DependencyInjection --version 9.0.0
-dotnet add package Microsoft.Extensions.Hosting --version 9.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection --version 8.0.0
+dotnet add package Microsoft.Extensions.Hosting --version 8.0.0
 
 echo - Test-Pakete
 cd /d "%BASE_DIR%\Arbeitszeiterfassung.Tests"
@@ -163,7 +163,7 @@ echo     "EnableOfflineMode": true
 echo   },
 echo   "DatabaseSettings": {
 echo     "Provider": "MySQL",
-echo     "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;",
+echo     "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;",
 echo     "CommandTimeout": 30,
 echo     "EnableSensitiveDataLogging": false
 echo   },
