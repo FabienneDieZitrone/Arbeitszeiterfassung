@@ -9,7 +9,7 @@ echo Pruefe .NET SDK...
 dotnet --version >nul 2>&1
 if errorlevel 1 (
     echo FEHLER: .NET SDK nicht gefunden!
-    echo Installation: winget install Microsoft.DotNet.SDK.9
+    echo Installation: winget install Microsoft.DotNet.SDK.8
     pause
     exit /b 1
 )

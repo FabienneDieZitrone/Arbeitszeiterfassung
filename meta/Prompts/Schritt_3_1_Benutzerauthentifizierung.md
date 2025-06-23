@@ -27,12 +27,12 @@ public class AuthenticationService : IAuthenticationService
 
 ### 2. IPRangeValidator.cs
 - IP-Adresse des Clients ermitteln
-- Gegen standorte.json validieren
+- Gegen die in der Datenbank gespeicherten Standorte validieren
 - Home-Office Erkennung
 - VPN-Range Support
 
 ### 3. StandortService.cs
-- standorte.json laden und cachen
+- Standortdaten aus der Datenbank laden und cachen
 - IP-Range Matching Algorithmus
 - Fallback-Mechanismen
 - Reload-Functionality
@@ -49,8 +49,7 @@ public class AuthenticationService : IAuthenticationService
 - Domain-Information
 - Fallback-Mechanismen
 
-### 6. Models/StandortConfig.cs
-- Deserialisierung von standorte.json
+- Abbildung der Standorttabelle
 - Strongly-Typed Configuration
 - Validierung der Konfiguration
 
@@ -59,7 +58,7 @@ public class AuthenticationService : IAuthenticationService
 ### Authentifizierungsablauf:
 1. Windows-Username aus Environment auslesen
 2. Aktuelle IP-Adresse ermitteln
-3. IP gegen standorte.json validieren
+3. IP mit den in der Datenbank vorhandenen Standorten abgleichen
 4. Bei ungültiger IP: Fehlermeldung und Exit
 5. Benutzer in DB suchen oder anlegen
 6. Standort zuweisen
@@ -80,7 +79,7 @@ public class AuthenticationService : IAuthenticationService
 ## Benötigte Dateien
 - Repository-Klassen aus Schritt 2.1
 - Entity-Modelle
-- standorte.json Template
+- SQL-Skript zur Initialisierung der Standorttabelle
 
 ## Erwartete Ausgabe
 ```
@@ -101,33 +100,6 @@ BLL/
     └── ISessionManager.cs
 ```
 
-### Beispiel standorte.json:
-```json
-{
-  "standorte": [
-    {
-      "id": 1,
-      "name": "Berlin Hauptsitz",
-      "ipRanges": [
-        {
-          "start": "192.168.1.1",
-          "end": "192.168.1.254",
-          "beschreibung": "Hauptnetzwerk"
-        }
-      ]
-    }
-  ],
-  "homeOffice": {
-    "enabled": true,
-    "vpnRanges": [
-      {
-        "start": "10.0.0.1",
-        "end": "10.0.0.254"
-      }
-    ]
-  }
-}
-```
 
 ## Unit Tests
 Erstelle Tests für:

@@ -10,7 +10,7 @@ category: Projektmanagement
 # Arbeitsplan: Arbeitszeiterfassungsanwendung für Bildungsträger
 
 ## Übersicht
-Dieser Arbeitsplan beschreibt die schrittweise Entwicklung einer standalone Arbeitszeiterfassungsanwendung mit C# (.NET 9.0) für einen Bildungsträger.
+Dieser Arbeitsplan beschreibt die schrittweise Entwicklung einer standalone Arbeitszeiterfassungsanwendung mit C# (.NET 8.0) für einen Bildungsträger.
 
 ## Phase 1: Projektinitialisierung und Grundstruktur
 

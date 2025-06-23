@@ -10,10 +10,10 @@ category: Entwicklung
 # Prompt für Schritt 1.1: Projekt-Setup und Verzeichnisstruktur
 
 ## Aufgabe
-Erstelle die grundlegende Projektstruktur für eine Arbeitszeiterfassungsanwendung mit C# (.NET 9.0) als Windows Forms Anwendung.
+Erstelle die grundlegende Projektstruktur für eine Arbeitszeiterfassungsanwendung mit C# (.NET 8.0) als Windows Forms Anwendung.
 
 ## Technische Anforderungen
-- .NET 9.0 mit C# 13.0
+- .NET 8.0 mit C# 12.0
 - Windows Forms für die UI
 - Entity Framework Core für Datenzugriff
 - 3-Schichten-Architektur (Presentation, Business Logic, Data Access)
@@ -32,7 +32,6 @@ Arbeitszeiterfassung/
 │   │   ├── MainForm.Designer.cs
 │   │   └── MainForm.resx
 │   ├── Resources/
-│   │   └── mp-logo.png
 │   └── App.config
 ├── Arbeitszeiterfassung.BLL/
 │   ├── Arbeitszeiterfassung.BLL.csproj
@@ -51,20 +50,20 @@ Arbeitszeiterfassung/
 │   ├── Constants/
 │   └── Helpers/
 └── Configuration/
-    └── standorte.json
 ```
 
 ## Spezifische Anforderungen
-1. Erstelle eine .NET 9.0 Solution mit vier Projekten
+1. Erstelle eine .NET 8.0 Solution mit vier Projekten
 2. Konfiguriere die Projektabhängigkeiten korrekt
 3. Füge notwendige NuGet-Pakete hinzu:
-   - Entity Framework Core 9.x
+   - Entity Framework Core 8.x
    - Entity Framework Core SQLite
    - Entity Framework Core MySQL
    - Newtonsoft.Json
 4. Erstelle eine Basis-App.config mit Platzhaltern für Connection Strings
 5. Implementiere die Program.cs mit grundlegender Fehlerbehandlung
-6. Erstelle ein leeres MainForm mit MP-Logo-Platzhalter
+6. Erstelle ein leeres MainForm mit Platzhalter für ein Logo
+7. Plane, Logo und Standortdaten bei Programmstart aus der Datenbank zu laden
 
 ## Benötigte Dateien
 Keine - dies ist der erste Schritt
@@ -75,7 +74,7 @@ Keine - dies ist der erste Schritt
 - Program.cs mit Basis-Implementation
 - MainForm (cs, Designer.cs, resx) mit Grundstruktur
 - App.config mit Connection String Templates
-- standorte.json mit Beispielstruktur
+- Standortdaten werden in der Datenbank gehalten; kein standorte.json mehr
 
 ## Hinweise
 - Verwende durchgehend deutsche Kommentare

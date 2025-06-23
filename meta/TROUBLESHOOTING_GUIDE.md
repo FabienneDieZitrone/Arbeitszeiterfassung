@@ -26,7 +26,7 @@ description: Lösungen für häufige Probleme bei der Entwicklung und im Betrieb
 ### Problem: Build fehlschlägt mit "SDK not found"
 **Symptome**: 
 ```
-error MSB3644: The reference assemblies for .NETCore,Version=v9.0 were not found
+error MSB3644: The reference assemblies for .NETCore,Version=v8.0 were not found
 ```
 
 **Lösung**:
@@ -34,9 +34,9 @@ error MSB3644: The reference assemblies for .NETCore,Version=v9.0 were not found
    ```bash
    dotnet --list-sdks
    ```
-2. Installieren Sie .NET 9.0 SDK:
+2. Installieren Sie .NET 8.0 SDK:
    ```bash
-   winget install Microsoft.DotNet.SDK.9
+   winget install Microsoft.DotNet.SDK.8
    ```
 3. Starten Sie Visual Studio/VS Code neu
 

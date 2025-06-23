@@ -30,21 +30,21 @@ echo 2. .NET SDK:
 dotnet --version >nul 2>&1
 if errorlevel 1 (
     echo ✗ .NET SDK nicht gefunden
-    echo   Installation: winget install Microsoft.DotNet.SDK.9
+    echo   Installation: winget install Microsoft.DotNet.SDK.8
     set /a ERRORS+=1
 ) else (
     echo ✓ .NET SDK gefunden
     for /f %%v in ('dotnet --version 2^>nul') do echo   Version: %%v
     
-    REM Prüfe auf .NET 9.0
-    dotnet --list-sdks | find "9.0" >nul 2>&1
+    REM Prüfe auf .NET 8.0
+    dotnet --list-sdks | find "8.0" >nul 2>&1
     if errorlevel 1 (
-        echo   ⚠ .NET 9.0 SDK nicht gefunden
+        echo   ⚠ .NET 8.0 SDK nicht gefunden
         echo     Installierte SDKs:
         dotnet --list-sdks 2>nul | findstr "^" | more
         set /a WARNINGS+=1
     ) else (
-        echo   ✓ .NET 9.0 SDK verfügbar
+        echo   ✓ .NET 8.0 SDK verfügbar
     )
 )
 echo.

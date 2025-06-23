@@ -486,10 +486,9 @@ public class OfflineDatabaseInitializer
         // Kopiere wichtige Stammdaten
         if (!await context.Standorte.AnyAsync())
         {
-            // Lade Standorte aus standorte.json
-            var standorteJson = await File.ReadAllTextAsync("standorte.json");
-            var standorte = JsonSerializer.Deserialize<List<Standort>>(standorteJson);
-            
+            // Lade Standorte aus der Hauptdatenbank
+            var standorte = await mainContext.Standorte.ToListAsync();
+
             await context.Standorte.AddRangeAsync(standorte);
             await context.SaveChangesAsync();
         }

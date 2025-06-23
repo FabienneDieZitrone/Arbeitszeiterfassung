@@ -15,7 +15,7 @@ try {
 }
 catch {
     Write-Host "❌ FEHLER: .NET SDK nicht gefunden!" -ForegroundColor Red
-    Write-Host "Installation: winget install Microsoft.DotNet.SDK.9" -ForegroundColor Yellow
+    Write-Host "Installation: winget install Microsoft.DotNet.SDK.8" -ForegroundColor Yellow
     exit 1
 }
 

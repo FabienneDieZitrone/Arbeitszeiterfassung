@@ -14,7 +14,7 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 ## Projektübersicht
 
 **Projekt**: Standalone Arbeitszeiterfassungsanwendung für einen Bildungsträger
-**Technologie**: C# 13.0 mit .NET 9.0, Windows Forms, Entity Framework Core
+**Technologie**: C# 12.0 mit .NET 8.0, Windows Forms, Entity Framework Core
 **Architektur**: 3-Schichten-Architektur (UI, BLL, DAL)
 **Datenbanken**: MySQL/MariaDB (Haupt) + SQLite (Offline)
 
@@ -33,7 +33,7 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 ## Entwicklungsrichtlinien
 
 ### Code-Stil:
-- **Sprache**: C# 13.0 (.NET 9.0)
+- **Sprache**: C# 12.0 (.NET 8.0)
 - **Kommentare**: Deutsch
 - **Namenskonventionen**: 
   - Klassen/Interfaces: PascalCase

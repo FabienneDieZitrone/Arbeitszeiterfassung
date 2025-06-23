@@ -57,14 +57,14 @@ Write-Host ""
 
 # 2. .NET SDK
 Write-Host "2. .NET SDK:" -ForegroundColor White
-if (Test-Command "dotnet" ".NET SDK" { dotnet --version } "winget install Microsoft.DotNet.SDK.9") {
-    # Prüfe auf .NET 9.0
+if (Test-Command "dotnet" ".NET SDK" { dotnet --version } "winget install Microsoft.DotNet.SDK.8") {
+    # Prüfe auf .NET 8.0
     $sdks = dotnet --list-sdks
-    if ($sdks -match "9\.0") {
-        Write-Host "  ✓ .NET 9.0 SDK verfügbar" -ForegroundColor Green
+    if ($sdks -match "8.0") {
+        Write-Host "  ✓ .NET 8.0 SDK verfügbar" -ForegroundColor Green
     }
     else {
-        Write-Host "  ⚠ .NET 9.0 SDK nicht gefunden" -ForegroundColor Yellow
+        Write-Host "  ⚠ .NET 8.0 SDK nicht gefunden" -ForegroundColor Yellow
         Write-Host "    Installierte SDKs:" -ForegroundColor Gray
         $sdks | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
         $warnings++

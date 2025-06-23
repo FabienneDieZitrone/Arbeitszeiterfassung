@@ -34,7 +34,7 @@ category: Projektmanagement
 ### c) Relevanz zur Aufgabenstellung: 9/10
 **Positiv:**
 - Alle geforderten Features enthalten
-- Technische Vorgaben (C# 13.0, .NET 9.0) beachtet
+- Technische Vorgaben (C# 12.0, .NET 8.0) beachtet
 - DSGVO-Konformität berücksichtigt
 
 **Verbesserungspotential:**
@@ -56,7 +56,7 @@ category: Projektmanagement
 
 #### Schritt 0.1: Entwicklungsumgebung Setup
 - Visual Studio 2022 Konfiguration
-- .NET 9.0 SDK Installation
+- .NET 8.0 SDK Installation
 - Datenbank-Server Setup
 - Git-Repository initialisieren
 

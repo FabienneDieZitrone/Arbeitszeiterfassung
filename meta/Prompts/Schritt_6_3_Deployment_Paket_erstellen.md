@@ -24,7 +24,7 @@ Erstelle ein vollständiges Deployment-Paket mit Single-File-Executable, automat
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Resources\app.ico</ApplicationIcon>
     
@@ -54,9 +54,6 @@ Erstelle ein vollständiges Deployment-Paket mit Single-File-Executable, automat
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="standorte.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <!-- Code-Signing -->
@@ -78,7 +75,7 @@ Erstelle ein vollständiges Deployment-Paket mit Single-File-Executable, automat
     <Platform>x64</Platform>
     <PublishDir>..\..\publish\</PublishDir>
     <PublishProtocol>FileSystem</PublishProtocol>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <SelfContained>true</SelfContained>
     <PublishSingleFile>true</PublishSingleFile>
@@ -184,7 +181,6 @@ New-Item -ItemType Directory -Path "$releaseDir\Docs" -Force | Out-Null
 # Copy files
 Copy-Item "publish\Arbeitszeiterfassung.UI.exe" "$releaseDir\Arbeitszeiterfassung.exe"
 Copy-Item "publish\appsettings.json" "$releaseDir\Config\appsettings.template.json"
-Copy-Item "publish\standorte.json" "$releaseDir\Config\standorte.template.json"
 
 # Copy documentation
 Copy-Item "docs\Benutzerhandbuch.pdf" "$releaseDir\Docs\"
@@ -202,7 +198,7 @@ Copy-Item "CHANGELOG.md" "$releaseDir\"
   "InstallPath": "%ProgramFiles%\\Mikropartner\\Arbeitszeiterfassung",
   "CreateDesktopShortcut": true,
   "CreateStartMenuShortcut": true,
-  "RequiredDotNetVersion": "9.0",
+  "RequiredDotNetVersion": "8.0",
   "MinimumOSVersion": "10.0.17763.0"
 }
 "@ | Out-File "$releaseDir\installer-config.json"
@@ -520,7 +516,7 @@ public class AutoUpdater
 - Windows 10 Version 1809 (Build 17763) oder höher
 - 4 GB RAM
 - 500 MB freier Festplattenspeicher
-- .NET 9.0 Runtime (wird automatisch installiert)
+- .NET 8.0 Runtime (wird automatisch installiert)
 - Bildschirmauflösung: 1024x768
 
 ### Empfohlen:
@@ -611,7 +607,7 @@ if (-not (Test-Path "$InstallPath\Arbeitszeiterfassung.exe")) {
 }
 
 # Check 2: Config files exist
-$requiredConfigs = @("appsettings.json", "standorte.json")
+$requiredConfigs = @("appsettings.json")
 foreach ($config in $requiredConfigs) {
     if (-not (Test-Path "$InstallPath\Config\$config")) {
         $errors += "Config file missing: $config"
