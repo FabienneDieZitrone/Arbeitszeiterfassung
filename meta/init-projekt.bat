@@ -44,23 +44,23 @@ echo.
 echo Erstelle Projekte...
 
 echo - Common Library
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
 dotnet sln add Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj
 
 echo - Data Access Layer
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
 dotnet sln add Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj
 
 echo - Business Logic Layer
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
 dotnet sln add Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj
 
 echo - User Interface
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0-windows
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0-windows
 dotnet sln add Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 
 echo - Tests
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
 dotnet sln add Arbeitszeiterfassung.Tests\Arbeitszeiterfassung.Tests.csproj
 
 REM Projektverweise
@@ -94,23 +94,23 @@ echo Installiere NuGet-Pakete...
 
 echo - Entity Framework für DAL
 cd Arbeitszeiterfassung.DAL
-dotnet add package Microsoft.EntityFrameworkCore --version 8.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0-preview.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
 cd ..
 
 echo - Configuration für Common
 cd Arbeitszeiterfassung.Common
-dotnet add package Microsoft.Extensions.Configuration --version 8.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json --version 8.0.0
-dotnet add package Microsoft.Extensions.Logging --version 8.0.0
+dotnet add package Microsoft.Extensions.Configuration --version 9.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json --version 9.0.0
+dotnet add package Microsoft.Extensions.Logging --version 9.0.0
 cd ..
 
 echo - DI Container für UI
 cd Arbeitszeiterfassung.UI
-dotnet add package Microsoft.Extensions.DependencyInjection --version 8.0.0
-dotnet add package Microsoft.Extensions.Hosting --version 8.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection --version 9.0.0
+dotnet add package Microsoft.Extensions.Hosting --version 9.0.0
 cd ..
 
 echo - Test-Pakete
@@ -156,7 +156,7 @@ echo     "EnableOfflineMode": true
 echo   },
 echo   "DatabaseSettings": {
 echo     "Provider": "MySQL",
-echo     "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;",
+echo     "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;",
 echo     "CommandTimeout": 30,
 echo     "EnableSensitiveDataLogging": false
 echo   },

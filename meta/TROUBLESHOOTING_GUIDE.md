@@ -108,7 +108,7 @@ MySqlException: Access denied for user 'root'@'localhost' (using password: YES)
 2. Benutzer neu anlegen:
    ```sql
    CREATE USER 'aze_user'@'localhost' IDENTIFIED BY 'sicheres_passwort';
-   GRANT ALL PRIVILEGES ON db10454681_aze.* TO 'aze_user'@'localhost';
+   GRANT ALL PRIVILEGES ON db1045481_aze1.* TO 'aze_user'@'localhost';
    FLUSH PRIVILEGES;
    ```
 3. Connection String anpassen in appsettings.json
@@ -122,7 +122,7 @@ MySqlException: Too many connections
 **Lösung**:
 1. Connection Pooling in Connection String:
    ```json
-   "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;MaximumPoolSize=50;ConnectionLifeTime=300;"
+   "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;MaximumPoolSize=50;ConnectionLifeTime=300;"
    ```
 2. Dispose Pattern korrekt implementieren:
    ```csharp
@@ -378,8 +378,8 @@ lblStatus.InvokeIfRequired(() => lblStatus.Text = "Aktualisiert");
 
 3. **Datenbank zurücksetzen**:
    ```sql
-   DROP DATABASE IF EXISTS db10454681_aze;
-   CREATE DATABASE db10454681_aze;
+   DROP DATABASE IF EXISTS db1045481_aze1;
+   CREATE DATABASE db1045481_aze1;
    -- Migrations neu ausführen
    ```
 

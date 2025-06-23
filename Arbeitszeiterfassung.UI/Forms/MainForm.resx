@@ -1,3 +1,12 @@
+<!--
+Titel: MainForm.resx
+Version: 1.0
+Letzte Aktualisierung: 02.06.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Forms/MainForm.resx
+Beschreibung: Ressourcen-Datei für das Hauptfenster, enthält das MP-Logo als eingebettete Ressource
+-->
 <?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">

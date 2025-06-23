@@ -25,8 +25,8 @@ fi
 DOTNET_VERSION=$(dotnet --version)
 echo "✓ .NET SDK Version: $DOTNET_VERSION"
 
-# Basis-Verzeichnis (überschreibbar per Umgebungsvariable BASE_DIR)
-BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
+# Basis-Verzeichnis
+BASE_DIR="/app/AZE/Arbeitszeiterfassung"
 
 # Erstelle Projektstruktur
 echo ""
@@ -44,27 +44,27 @@ echo "Erstelle Projekte..."
 
 # Common Library
 echo "- Arbeitszeiterfassung.Common"
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
 dotnet sln add Arbeitszeiterfassung.Common/Arbeitszeiterfassung.Common.csproj
 
 # Data Access Layer
 echo "- Arbeitszeiterfassung.DAL"
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
 dotnet sln add Arbeitszeiterfassung.DAL/Arbeitszeiterfassung.DAL.csproj
 
 # Business Logic Layer
 echo "- Arbeitszeiterfassung.BLL"
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
 dotnet sln add Arbeitszeiterfassung.BLL/Arbeitszeiterfassung.BLL.csproj
 
 # User Interface (Windows Forms)
 echo "- Arbeitszeiterfassung.UI"
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0-windows
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0-windows
 dotnet sln add Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj
 
 # Test-Projekte
 echo "- Arbeitszeiterfassung.Tests"
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
 dotnet sln add Arbeitszeiterfassung.Tests/Arbeitszeiterfassung.Tests.csproj
 
 # Erstelle Projektverweise
@@ -164,7 +164,7 @@ cat > Arbeitszeiterfassung.UI/appsettings.json << 'EOF'
   },
   "DatabaseSettings": {
     "Provider": "MySQL",
-    "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;",
+    "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;",
     "CommandTimeout": 30,
     "EnableSensitiveDataLogging": false
   },
@@ -270,4 +270,3 @@ echo "3. Verwenden Sie den Prompt: /app/AZE/Prompts/Schritt_1_2_Datenbankdesign.
 echo ""
 echo "Zum Öffnen in VS Code:"
 echo "cd $BASE_DIR && code ."
-

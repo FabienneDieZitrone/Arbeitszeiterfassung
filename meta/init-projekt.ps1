@@ -46,27 +46,27 @@ Write-Host "Erstelle Projekte..." -ForegroundColor Yellow
 
 # Common Library
 Write-Host "- Arbeitszeiterfassung.Common" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
 dotnet sln add Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj
 
 # Data Access Layer
 Write-Host "- Arbeitszeiterfassung.DAL" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
 dotnet sln add Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj
 
 # Business Logic Layer
 Write-Host "- Arbeitszeiterfassung.BLL" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
 dotnet sln add Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj
 
 # User Interface (Windows Forms)
 Write-Host "- Arbeitszeiterfassung.UI" -ForegroundColor Cyan
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0-windows
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0-windows
 dotnet sln add Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 
 # Test-Projekte
 Write-Host "- Arbeitszeiterfassung.Tests" -ForegroundColor Cyan
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
 dotnet sln add Arbeitszeiterfassung.Tests\Arbeitszeiterfassung.Tests.csproj
 
 # Erstelle Projektverweise
@@ -174,7 +174,7 @@ $appsettings = @'
   },
   "DatabaseSettings": {
     "Provider": "MySQL",
-    "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;",
+    "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;",
     "CommandTimeout": 30,
     "EnableSensitiveDataLogging": false
   },
