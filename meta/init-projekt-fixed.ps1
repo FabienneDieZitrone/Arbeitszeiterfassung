@@ -46,27 +46,27 @@ Write-Host "Erstelle Projekte..." -ForegroundColor Yellow
 
 # Common Library
 Write-Host "- Arbeitszeiterfassung.Common" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.Common -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.Common -f net9.0
 dotnet sln add Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj
 
 # Data Access Layer
 Write-Host "- Arbeitszeiterfassung.DAL" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.DAL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.DAL -f net9.0
 dotnet sln add Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj
 
 # Business Logic Layer
 Write-Host "- Arbeitszeiterfassung.BLL" -ForegroundColor Cyan
-dotnet new classlib -n Arbeitszeiterfassung.BLL -f net8.0
+dotnet new classlib -n Arbeitszeiterfassung.BLL -f net9.0
 dotnet sln add Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj
 
 # User Interface (Windows Forms)
 Write-Host "- Arbeitszeiterfassung.UI" -ForegroundColor Cyan
-dotnet new winforms -n Arbeitszeiterfassung.UI -f net8.0-windows
+dotnet new winforms -n Arbeitszeiterfassung.UI -f net9.0-windows
 dotnet sln add Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj
 
 # Test-Projekte
 Write-Host "- Arbeitszeiterfassung.Tests" -ForegroundColor Cyan
-dotnet new xunit -n Arbeitszeiterfassung.Tests -f net8.0
+dotnet new xunit -n Arbeitszeiterfassung.Tests -f net9.0
 dotnet sln add Arbeitszeiterfassung.Tests\Arbeitszeiterfassung.Tests.csproj
 
 # Erstelle Projektverweise
@@ -104,25 +104,25 @@ Write-Host "Installiere NuGet-Pakete..." -ForegroundColor Yellow
 
 # Entity Framework Core für DAL
 Set-Location Arbeitszeiterfassung.DAL
-dotnet add package Microsoft.EntityFrameworkCore -v 8.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 8.0.0
-dotnet add package Pomelo.EntityFrameworkCore.MySql -v 8.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Tools -v 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore -v 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite -v 9.0.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql -v 9.0.0-preview.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools -v 9.0.0
 Set-Location ..
 
 # Configuration für Common
 Set-Location Arbeitszeiterfassung.Common
-dotnet add package Microsoft.Extensions.Configuration -v 8.0.0
-dotnet add package Microsoft.Extensions.Configuration.Json -v 8.0.0
-dotnet add package Microsoft.Extensions.Configuration.Binder -v 8.0.0
-dotnet add package Microsoft.Extensions.Logging -v 8.0.0
-dotnet add package System.Security.Cryptography.ProtectedData -v 8.0.0
+dotnet add package Microsoft.Extensions.Configuration -v 9.0.0
+dotnet add package Microsoft.Extensions.Configuration.Json -v 9.0.0
+dotnet add package Microsoft.Extensions.Configuration.Binder -v 9.0.0
+dotnet add package Microsoft.Extensions.Logging -v 9.0.0
+dotnet add package System.Security.Cryptography.ProtectedData -v 9.0.0
 Set-Location ..
 
 # Windows Forms Erweiterungen für UI
 Set-Location Arbeitszeiterfassung.UI
-dotnet add package Microsoft.Extensions.DependencyInjection -v 8.0.0
-dotnet add package Microsoft.Extensions.Hosting -v 8.0.0
+dotnet add package Microsoft.Extensions.DependencyInjection -v 9.0.0
+dotnet add package Microsoft.Extensions.Hosting -v 9.0.0
 Set-Location ..
 
 # Test-Pakete
@@ -178,7 +178,7 @@ $appsettingsContent = @'
   },
   "DatabaseSettings": {
     "Provider": "MySQL",
-    "ConnectionString": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;",
+    "ConnectionString": "Server=localhost;Database=db1045481-aze1;User=root;Password=Start.321;",
     "CommandTimeout": 30,
     "EnableSensitiveDataLogging": false
   },

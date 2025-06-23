@@ -199,7 +199,7 @@ echo Erstelle Konfigurationsdateien...
 REM appsettings.json fuer UI
 echo { > Arbeitszeiterfassung.UI\appsettings.json
 echo   "ConnectionStrings": { >> Arbeitszeiterfassung.UI\appsettings.json
-echo     "DefaultConnection": "server=wp10454681.Server-he.de;database=db10454681-aze;uid=db10454681-aze;pwd=Start.321;", >> Arbeitszeiterfassung.UI\appsettings.json
+echo     "DefaultConnection": "Server=localhost;Database=Arbeitszeiterfassung;User=root;Password=;", >> Arbeitszeiterfassung.UI\appsettings.json
 echo     "OfflineConnection": "Data Source=arbeitszeiterfassung.db" >> Arbeitszeiterfassung.UI\appsettings.json
 echo   }, >> Arbeitszeiterfassung.UI\appsettings.json
 echo   "Logging": { >> Arbeitszeiterfassung.UI\appsettings.json

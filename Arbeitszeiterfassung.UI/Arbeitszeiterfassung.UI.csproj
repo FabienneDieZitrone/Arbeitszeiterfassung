@@ -9,7 +9,7 @@ Beschreibung: Projektdatei für das Windows Forms UI, inkl. Referenz auf standor
 -->
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>Arbeitszeiterfassung.UI</RootNamespace>
     <AssemblyName>Arbeitszeiterfassung.UI</AssemblyName>
@@ -21,6 +21,7 @@ Beschreibung: Projektdatei für das Windows Forms UI, inkl. Referenz auf standor
     <SelfContained>true</SelfContained>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>Resources\mp-logo.ico</ApplicationIcon>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </PropertyGroup>
@@ -33,7 +34,6 @@ Beschreibung: Projektdatei für das Windows Forms UI, inkl. Referenz auf standor
   <ItemGroup>
     <ProjectReference Include="..\Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj" />
     <ProjectReference Include="..\Arbeitszeiterfassung.Common\Arbeitszeiterfassung.Common.csproj" />
-    <ProjectReference Include="..\Arbeitszeiterfassung.DAL\Arbeitszeiterfassung.DAL.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="App.config">

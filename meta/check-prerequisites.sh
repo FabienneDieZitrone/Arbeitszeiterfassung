@@ -63,12 +63,12 @@ echo ""
 
 # 2. .NET SDK
 echo "2. .NET SDK:"
-if check_command "dotnet" "dotnet --version" ".NET SDK" "https://dotnet.microsoft.com/download/dotnet/8.0"; then
-    # Prüfe spezifisch auf .NET 8.0
-    if dotnet --list-sdks | grep -q "8.0"; then
-        echo -e "${GREEN}  ✓ .NET 8.0 SDK verfügbar${NC}"
+if check_command "dotnet" "dotnet --version" ".NET SDK" "https://dotnet.microsoft.com/download/dotnet/9.0"; then
+    # Prüfe spezifisch auf .NET 9.0
+    if dotnet --list-sdks | grep -q "9.0"; then
+        echo -e "${GREEN}  ✓ .NET 9.0 SDK verfügbar${NC}"
     else
-        echo -e "${YELLOW}  ⚠ .NET 8.0 SDK nicht gefunden${NC}"
+        echo -e "${YELLOW}  ⚠ .NET 9.0 SDK nicht gefunden${NC}"
         echo "    Installierte SDKs:"
         dotnet --list-sdks | sed 's/^/    /'
         WARNINGS=$((WARNINGS + 1))
@@ -84,21 +84,16 @@ if check_command "mysql" "mysql --version" "MySQL/MariaDB Client" "sudo apt-get 
     MYSQL_FOUND=true
 fi
 
-# Optional prüfen, ob der lokale Server laufen muss
-SKIP_MYSQL_SERVICE_CHECK=${SKIP_MYSQL_SERVICE_CHECK:-0}
+# Prüfe ob Server läuft
 if $MYSQL_FOUND; then
-    if [ "$SKIP_MYSQL_SERVICE_CHECK" = "1" ]; then
-        echo -e "${YELLOW}  ⚠ Überspringe MySQL/MariaDB Server-Check (Remote DB)${NC}"
+    if systemctl is-active --quiet mysql 2>/dev/null || systemctl is-active --quiet mariadb 2>/dev/null; then
+        echo -e "${GREEN}  ✓ MySQL/MariaDB Server läuft${NC}"
+    elif pgrep -x "mysqld" > /dev/null; then
+        echo -e "${GREEN}  ✓ MySQL/MariaDB Server läuft${NC}"
     else
-        if systemctl is-active --quiet mysql 2>/dev/null || systemctl is-active --quiet mariadb 2>/dev/null; then
-            echo -e "${GREEN}  ✓ MySQL/MariaDB Server läuft${NC}"
-        elif pgrep -x "mysqld" > /dev/null; then
-            echo -e "${GREEN}  ✓ MySQL/MariaDB Server läuft${NC}"
-        else
-            echo -e "${YELLOW}  ⚠ MySQL/MariaDB Server läuft nicht${NC}"
-            echo "    Starten mit: sudo systemctl start mariadb"
-            WARNINGS=$((WARNINGS + 1))
-        fi
+        echo -e "${YELLOW}  ⚠ MySQL/MariaDB Server läuft nicht${NC}"
+        echo "    Starten mit: sudo systemctl start mariadb"
+        WARNINGS=$((WARNINGS + 1))
     fi
 fi
 
@@ -188,4 +183,3 @@ echo ""
 
 # Exit-Code basierend auf Fehlern
 exit $ERRORS
-

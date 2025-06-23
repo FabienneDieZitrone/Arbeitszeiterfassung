@@ -16,8 +16,8 @@ description: Strukturierte Anforderungsdokumentation für das Arbeitszeiterfassu
 Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungsträger mit C# 7.3
 
 ### 1.2 Technische Rahmenbedingungen
-- **Programmiersprache**: Mit dem installierten .NET SDK 8.0 und dem Ziel-Framework "net8.0" wird C# 12.0 verwendet.
-- **Datenbank**: db10454681-aze (Passwort: Start.321)
+- **Programmiersprache**: Mit dem installierten .NET SDK 9.0.204 und dem Ziel-Framework „net9.0“ ist die standardmäßig genutzte C#-Sprache Version 13.0.
+- **Datenbank**: db1045481-aze1 (Passwort: Start.321)
 - **Deployment**: Standalone-Anwendung ohne externe Abhängigkeiten
 - **Netzwerk**: Offline-Fähigkeit mit automatischer Synchronisation
 
@@ -323,7 +323,7 @@ Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungst
 ### 6.2 Offline-Synchronisation
 
 #### 6.2.1 Lokale Speicherung
-- **Primäre DB**: MySQL/MariaDB (db10454681-aze)
+- **Primäre DB**: MySQL/MariaDB (db1045481-aze1)
 - **Lokale DB**: SQLite mit identischer Struktur
 - **Sync-Queue**: Warteschlange für ausstehende Operationen
 
