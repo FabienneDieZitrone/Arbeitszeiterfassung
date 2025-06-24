@@ -56,7 +56,7 @@ Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungst
 
 ### 3.1 Benutzerauthentifizierung
 - **Automatische Benutzererkennung**: Aus lokaler Umgebungsvariable
-- **Standorterkennung**: Über IP-Range (standorte.json)
+- **Standorterkennung**: Über IP-Range aus der Datenbank
 - **Erstanmeldung**: Automatische Benutzeranlage
 
 ### 3.2 Startseite
@@ -317,7 +317,7 @@ Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungst
   - Datenzugriffsschicht (Data Access Layer mit Entity Framework)
 - **Lokale Datenhaltung**: SQLite für Offline-Daten
 - **Konfiguration**: 
-  - standorte.json (IP-Range-Mapping)
+  - Standortdatenbank (IP-Range-Mapping)
   - app.config (Verbindungsstrings, Einstellungen)
 
 ### 6.2 Offline-Synchronisation
@@ -400,7 +400,7 @@ Entwicklung einer standalone Arbeitszeiterfassungsanwendung für einen Bildungst
 
 ## 9. Konfigurationsdateien
 
-### 9.1 standorte.json Struktur
+### 9.1 Standorttabelle Beispielinhalt
 ```json
 {
   "standorte": [

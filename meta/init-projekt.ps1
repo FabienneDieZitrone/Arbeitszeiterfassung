@@ -187,29 +187,6 @@ $appsettings = @'
 '@
 $appsettings | Out-File -FilePath "Arbeitszeiterfassung.UI\appsettings.json" -Encoding UTF8
 
-# standorte.json
-$standorte = @'
-{
-  "Standorte": [
-    {
-      "StandortId": 1,
-      "Name": "Hauptstandort",
-      "IpRanges": [
-        "192.168.1.0/24",
-        "10.0.0.0/16"
-      ]
-    },
-    {
-      "StandortId": 2,
-      "Name": "Zweigstelle Nord",
-      "IpRanges": [
-        "192.168.2.0/24"
-      ]
-    }
-  ]
-}
-'@
-$standorte | Out-File -FilePath "Arbeitszeiterfassung.UI\standorte.json" -Encoding UTF8
 
 # Erstelle .gitignore
 $gitignore = @'

@@ -25,7 +25,7 @@ Dieser Arbeitsplan beschreibt die schrittweise Entwicklung einer standalone Arbe
 **Benötigte Dateien**: Arbeitsplan_Arbeitszeiterfassung.md
 
 ### Schritt 1.3: Konfigurationsmanagement
-**Ziel**: App.config, standorte.json und Basis-Konfiguration einrichten
+**Ziel**: App.config und Basis-Konfiguration einrichten
 **Aufwand**: 1 Stunde
 **Benötigte Dateien**: Entity-Modelle aus Schritt 1.2
 
@@ -46,7 +46,7 @@ Dieser Arbeitsplan beschreibt die schrittweise Entwicklung einer standalone Arbe
 ### Schritt 3.1: Benutzerauthentifizierung
 **Ziel**: Windows-Benutzer-Erkennung und automatische Anmeldung
 **Aufwand**: 2 Stunden
-**Benötigte Dateien**: DAL-Komponenten, standorte.json
+**Benötigte Dateien**: DAL-Komponenten
 
 ### Schritt 3.2: Zeiterfassungslogik
 **Ziel**: Start/Stopp-Funktionalität mit Validierung
@@ -100,7 +100,7 @@ Dieser Arbeitsplan beschreibt die schrittweise Entwicklung einer standalone Arbe
 ### Schritt 5.2: Benachrichtigungen und Validierungen
 **Ziel**: Freitags-Check, IP-Range-Validierung
 **Aufwand**: 2 Stunden
-**Benötigte Dateien**: standorte.json, Geschäftslogik
+**Benötigte Dateien**: Standortdatenbank, Geschäftslogik
 
 ### Schritt 5.3: Änderungsprotokoll und Audit
 **Ziel**: Vollständiges Audit-Trail-System
