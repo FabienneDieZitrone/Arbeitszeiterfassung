@@ -10,14 +10,14 @@ category: Entwicklung
 # Prompt für Schritt 4.1: Hauptfenster und Navigation
 
 ## Aufgabe
-Erstelle das Hauptfenster (MainForm) der Arbeitszeiterfassungsanwendung mit MP-Logo, Navigation und Grundlayout.
+Erstelle das Hauptfenster (MainForm) der Arbeitszeiterfassungsanwendung mit MP-Logo, Navigation und Grundlayout. Das Logo wird beim Start aus der Datenbank geladen.
 
 ## UI-Komponenten
 
 ### 1. MainForm Design
 - **Fenster-Eigenschaften**:
   - Titel: "Arbeitszeiterfassung - [Benutzername]"
-  - Icon: MP-Logo
+  - Icon: MP-Logo (aus der Datenbank geladen)
   - Größe: 1024x768 (resizable)
   - MinimumSize: 800x600
   - StartPosition: CenterScreen
@@ -25,7 +25,7 @@ Erstelle das Hauptfenster (MainForm) der Arbeitszeiterfassungsanwendung mit MP-L
 ### 2. Layout-Struktur
 ```
 ┌─────────────────────────────────────────┐
-│ MP-Logo │ Arbeitszeiterfassung         │ (TitleBar)
+│ MP-Logo │ Arbeitszeiterfassung         │ (TitleBar, Logo aus DB)
 ├─────────────────────────────────────────┤
 │ Benutzer: [Name] ([Rolle])    [Status] │ (StatusBar)
 ├─────────────────────────────────────────┤
@@ -80,7 +80,7 @@ Erstelle das Hauptfenster (MainForm) der Arbeitszeiterfassungsanwendung mit MP-L
 - Material Design Icons
 - 24x24 für Toolbar
 - 16x16 für Buttons
-- MP-Logo: 48x48
+- MP-Logo: 48x48 (aus der Datenbank geladen)
 
 ### 5. Controls und Events
 
@@ -114,7 +114,7 @@ Erstelle das Hauptfenster (MainForm) der Arbeitszeiterfassungsanwendung mit MP-L
 ## Benötigte Dateien
 - AuthenticationService aus Schritt 3.1
 - SessionManager
-- MP-Logo Datei
+- MP-Logo aus Datenbank
 
 ## Erwartete Ausgabe
 ```
