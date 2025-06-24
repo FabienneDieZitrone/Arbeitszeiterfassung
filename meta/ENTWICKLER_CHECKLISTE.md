@@ -36,7 +36,6 @@ Diese Checkliste führt Sie durch alle 19 Entwicklungsschritte mit konkreten Pr�
 ### ☐ Schritt 1.3: Konfigurationsmanagement
 - [ ] ConfigurationManager implementiert
 - [ ] appsettings.json strukturiert
-- [ ] standorte.json erstellt
 - [ ] Verschlüsselung für Connection Strings
 - [ ] Hot-Reload funktioniert
 - [ ] Umgebungsspezifische Configs (Dev/Prod)

@@ -73,7 +73,7 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 
 ### Funktional:
 1. **Automatische Benutzeranmeldung** über Windows-Username
-2. **IP-basierte Standorterkennung** (standorte.json)
+2. **IP-basierte Standorterkennung** (Datenbanktabelle)
 3. **Offline-Fähigkeit** mit automatischer Synchronisation
 4. **Rollenbasierte Berechtigungen** (5 Rollen)
 5. **Genehmigungsworkflow** für nachträgliche Änderungen

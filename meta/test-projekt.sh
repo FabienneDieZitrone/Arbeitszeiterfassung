@@ -92,8 +92,6 @@ echo -e "${YELLOW}3. Prüfe Konfigurationsdateien...${NC}"
 test -f "Arbeitszeiterfassung.UI/appsettings.json"
 check_result $? "appsettings.json vorhanden"
 
-test -f "Arbeitszeiterfassung.UI/standorte.json"
-check_result $? "standorte.json vorhanden"
 
 test -f ".gitignore"
 check_result $? ".gitignore vorhanden"

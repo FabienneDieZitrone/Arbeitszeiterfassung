@@ -168,28 +168,6 @@ echo   }
 echo }
 ) > Arbeitszeiterfassung.UI\appsettings.json
 
-REM standorte.json
-(
-echo {
-echo   "Standorte": [
-echo     {
-echo       "StandortId": 1,
-echo       "Name": "Hauptstandort",
-echo       "IpRanges": [
-echo         "192.168.1.0/24",
-echo         "10.0.0.0/16"
-echo       ]
-echo     },
-echo     {
-echo       "StandortId": 2,
-echo       "Name": "Zweigstelle Nord",
-echo       "IpRanges": [
-echo         "192.168.2.0/24"
-echo       ]
-echo     }
-echo   ]
-echo }
-) > Arbeitszeiterfassung.UI\standorte.json
 
 REM .gitignore
 (
