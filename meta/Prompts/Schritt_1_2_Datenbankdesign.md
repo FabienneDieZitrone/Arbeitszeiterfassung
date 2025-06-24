@@ -53,19 +53,26 @@ Erstelle die kompletten Entity Framework Core Modelle für die Arbeitszeiterfass
 - Key-Value Store für Konfiguration
 - Typisierte Werte (string, number, boolean, json)
 
+### 9. AppRessource.cs
+- Id (int, Primary Key)
+- Bezeichnung (nvarchar)
+- Daten (BLOB)
+- LetzteAktualisierung (datetime)
+- Wird für Unternehmenslogo und weitere App-Ressourcen verwendet
+
 ## Zusätzlich zu erstellen
 
-### 9. ApplicationDbContext.cs
+### 10. ApplicationDbContext.cs
 - DbContext für MySQL/MariaDB
 - Fluent API Konfiguration
 - Seed-Daten für Rollen
 
-### 10. OfflineDbContext.cs  
+### 11. OfflineDbContext.cs
 - DbContext für SQLite
 - Identische Struktur wie ApplicationDbContext
 - Angepasste Konfiguration für SQLite
 
-### 11. Enums/
+### 12. Enums/
 - Berechtigungsstufe.cs
 - AenderungsAktion.cs
 - AenderungsGrund.cs

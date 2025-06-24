@@ -28,19 +28,28 @@ Erstelle das vollständige Konfigurationsmanagement für die Arbeitszeiterfassun
 </configuration>
 ```
 
+
 ### 2. Tabelle "Standorte"
 Alle Standorte werden in einer Datenbanktabelle gepflegt:
 - Standortdefinitionen inkl. IP-Range Mappings
 - Home-Office Einstellungen
 - VPN-Konfiguration
 
-### 3. ConfigurationManager.cs
+### 3. Tabelle "AppRessourcen" (Logo)
+Das Unternehmenslogo wird nicht mehr im Ressourcenordner abgelegt, sondern in einer eigenen Datenbanktabelle gespeichert.
+- Id (int, Primary Key)
+- Bezeichnung (nvarchar)
+- Daten (BLOB)
+- LetzteAktualisierung (datetime)
+Die Anwendung lädt das Logo beim Start aus dieser Tabelle.
+
+### 4. ConfigurationManager.cs
 - Zentrale Konfigurationsverwaltung
 - Strongly-typed Settings
 - Hot-Reload Funktionalität
 - Verschlüsselung sensibler Daten
 
-### 4. AppSettings.cs
+### 5. AppSettings.cs
 ```csharp
 public class AppSettings
 {
@@ -52,12 +61,12 @@ public class AppSettings
 }
 ```
 
-### 5. EncryptionHelper.cs
+### 6. EncryptionHelper.cs
 - Connection String Verschlüsselung
 - API-Key Schutz
 - Sichere Speicherung mit DPAPI
 
-### 6. ConfigValidator.cs
+### 7. ConfigValidator.cs
 - Konfigurationsprüfung beim Start
 - Pflichtfelder-Validierung
 - IP-Range Format-Checks

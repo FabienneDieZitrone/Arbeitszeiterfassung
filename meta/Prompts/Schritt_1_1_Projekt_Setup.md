@@ -62,8 +62,8 @@ Arbeitszeiterfassung/
    - Newtonsoft.Json
 4. Erstelle eine Basis-App.config mit Platzhaltern für Connection Strings
 5. Implementiere die Program.cs mit grundlegender Fehlerbehandlung
-6. Erstelle ein leeres MainForm mit Platzhalter für ein Logo
-7. Plane, Logo und Standortdaten bei Programmstart aus der Datenbank zu laden
+6. Erstelle ein leeres MainForm mit Platzhalter für das Unternehmenslogo (Laden aus der Datenbank)
+7. Speichere Logo und Standortdaten in der Datenbank und lade sie beim Programmstart
 
 ## Benötigte Dateien
 Keine - dies ist der erste Schritt
@@ -74,7 +74,7 @@ Keine - dies ist der erste Schritt
 - Program.cs mit Basis-Implementation
 - MainForm (cs, Designer.cs, resx) mit Grundstruktur
 - App.config mit Connection String Templates
-- Standortdaten werden in der Datenbank gehalten; kein standorte.json mehr
+- Standort- und Logodaten werden in der Datenbank gehalten; keine standorte.json oder lokale Logodatei mehr
 
 ## Hinweise
 - Verwende durchgehend deutsche Kommentare
