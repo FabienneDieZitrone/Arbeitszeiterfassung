@@ -1,6 +1,7 @@
 # Arbeitszeiterfassung
 
 Dieses Projekt dient der Erfassung und Verwaltung von Arbeitszeiten. Es wurde automatisch mit `init-projekt-v3.bat` erstellt.
+Nutze auch die Datei /meta/ZENTRALE_ANWEISUNGSDATEI.md!
 
 ## Aktueller Stand
 Die Projektstruktur mit BLL, DAL und UI ist angelegt, enthält jedoch überwiegend Platzhalter. Die Implementierung der Geschäftslogik und der Datenzugriffsschicht befindet sich noch im Aufbau.
@@ -21,3 +22,5 @@ bash setup.sh
 ```
 
 Danach steht `dotnet` mit Version 8 automatisch zur Verfügung.
+
+Antworte immer auf deutsch!

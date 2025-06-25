@@ -13,21 +13,21 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 
 ## Projektübersicht
 
-**Projekt**: Standalone Arbeitszeiterfassungsanwendung für einen Bildungsträger
-**Technologie**: C# 12.0 mit .NET 8.0, Windows Forms, Entity Framework Core
-**Architektur**: 3-Schichten-Architektur (UI, BLL, DAL)
+**Projekt**: Standalone Arbeitszeiterfassungsanwendung für einen Bildungsträger  
+**Technologie**: C# 12.0 mit .NET 8.0, Windows Forms, Entity Framework Core  
+**Architektur**: 3-Schichten-Architektur (UI, BLL, DAL)  
 **Datenbanken**: MySQL/MariaDB (Haupt) + SQLite (Offline)
 
 ## Aktueller Projektstatus
 
 ### Bereits erstellt:
-1. **Arbeitsplan_Arbeitszeiterfassung.md** - Vollständiger Entwicklungsplan mit 19 Schritten
-2. **Prompts/** - Ordner mit 5 detaillierten Einzelprompts für die ersten Schritte
-3. **Arbeitsplan_Bewertung.md** - Kritische Bewertung und Optimierungen
-4. **Zusammenfassung_Arbeitsplan.md** - Executive Summary
+1. **Arbeitsplan_Arbeitszeiterfassung.md** – Vollständiger Entwicklungsplan mit 19 Schritten
+2. **Prompts/** – Ordner mit 5 detaillierten Einzelprompts für die ersten Schritte
+3. **Arbeitsplan_Bewertung.md** – Kritische Bewertung und Optimierungen
+4. **Zusammenfassung_Arbeitsplan.md** – Executive Summary
 
 ### Nächste Schritte:
-- **Aktuell**: Schritt 1.1 - Projekt-Setup und Verzeichnisstruktur
+- **Aktuell**: Schritt 1.1 – Projekt-Setup und Verzeichnisstruktur
 - **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
 
 ## Entwicklungsrichtlinien
@@ -73,7 +73,7 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 
 ### Funktional:
 1. **Automatische Benutzeranmeldung** über Windows-Username
-2. **IP-basierte Standorterkennung** (Datenbanktabelle)
+2. **IP-basierte Standorterkennung über Datenbanktabelle**
 3. **Offline-Fähigkeit** mit automatischer Synchronisation
 4. **Rollenbasierte Berechtigungen** (5 Rollen)
 5. **Genehmigungsworkflow** für nachträgliche Änderungen
@@ -95,8 +95,8 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 
 ## Datenbank-Verbindung
 
-**Produktionsdatenbank**: db10454681-aze
-**Passwort**: Start.321
+**Produktionsdatenbank**: db10454681-aze  
+**Passwort**: Start.321  
 **Provider**: MySQL/MariaDB
 
 ## Befehle für neue Chat-Session
@@ -116,7 +116,7 @@ ls -la
 
 1. **Nach jeder Datei-Erstellung**: YAML-Header hinzufügen
 2. **Bei Code-Änderungen**: Kommentare aktualisieren
-3. **Nach Feature-Completion**: Dokumentation updaten
+3. **Nach Feature-Completion**: Dokumentation updaten (auch die ZENTRALE_ANWEISUNGSDATEI.md)
 4. **Vor Schritt-Abschluss**: Code-Review durchführen
 
 ## Hilfreiche Referenzen
@@ -131,6 +131,6 @@ ls -la
 2. **Offline-Sync**: SQLite muss identische Struktur wie MySQL haben
 3. **Sicherheit**: Keine Passwörter im Code, nur Windows-Auth
 4. **Performance**: Lazy Loading vermeiden, Eager Loading bevorzugen
-5. **Testing**: Mindestens 80% Code Coverage anstreben
+5. **Testing**: **Immer 100% Code Coverage sicherstellen**
 
 Diese Datei dient als zentraler Einstiegspunkt für jede neue Session!
