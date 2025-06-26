@@ -2,8 +2,8 @@
 title: ZENTRALE_ANWEISUNGSDATEI.md - Anweisungen zur Arbeitszeiterfassung
 description: Zentrale Anweisungsdatei bei der Entwicklung der Arbeitszeiterfassungsanwendung
 author: Tanja Trella
-version: 1.0
-lastUpdated: 26.01.2025
+version: 1.3
+lastUpdated: 26.06.2025
 category: Konfiguration
 ---
 
@@ -25,10 +25,11 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 2. **Prompts/** – Ordner mit 5 detaillierten Einzelprompts für die ersten Schritte
 3. **Arbeitsplan_Bewertung.md** – Kritische Bewertung und Optimierungen
 4. **Zusammenfassung_Arbeitsplan.md** – Executive Summary
+5. **Konfigurationsmanagement** – ConfigurationManager und App.config eingerichtet
 
 ### Nächste Schritte:
-- **Aktuell**: Schritt 1.1 – Projekt-Setup und Verzeichnisstruktur
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
+- **Aktuell**: Schritt 3.1 – Benutzerauthentifizierung
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_1_Benutzerauthentifizierung.md`
 
 ## Entwicklungsrichtlinien
 
@@ -122,7 +123,7 @@ ls -la
 ## Hilfreiche Referenzen
 
 - **Hauptplan**: `/app/AZE/Arbeitsplan_Arbeitszeiterfassung.md`
-- **Nächster Prompt**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
+- **Nächster Prompt**: `/app/AZE/Prompts/Schritt_2_2_Offline_Synchronisation.md`
 - **Bewertung**: `/app/AZE/Arbeitsplan_Bewertung.md`
 
 ## Spezielle Hinweise

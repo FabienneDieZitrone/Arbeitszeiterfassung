@@ -29,6 +29,7 @@ Beschreibung: Projektdatei für das Windows Forms UI
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.*" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arbeitszeiterfassung.BLL\Arbeitszeiterfassung.BLL.csproj" />
@@ -37,6 +38,12 @@ Beschreibung: Projektdatei für das Windows Forms UI
   </ItemGroup>
   <ItemGroup>
     <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="App.Development.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="App.Production.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <!-- Logo und Standortdaten werden aus der Datenbank geladen -->
