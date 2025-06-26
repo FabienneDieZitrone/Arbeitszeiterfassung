@@ -1,7 +1,3 @@
-# Ignore bin and obj directories
-bin/
-obj/
-
 # Visual Studio user files
 *.user
 *.suo
@@ -18,3 +14,5 @@ bin/
 *.suo
 *.cache
 *.AssemblyInfo.cs
+
+.vs/
