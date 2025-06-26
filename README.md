@@ -1,6 +1,6 @@
 ---
 title: README
-version: 1.3
+version: 1.4
 lastUpdated: 26.06.2025
 author: Tanja Trella
 status: In Bearbeitung
@@ -38,6 +38,6 @@ bash setup.sh
 
 Danach steht `dotnet` mit Version 8 automatisch zur Verfügung.
 
-Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das Skript `build-windows.cmd` genutzt werden. Es installiert die erforderliche Windows-Desktop-Workload und führt anschliessend `dotnet build` sowie `dotnet test` aus. Die Konsolenausgabe des Skripts kann zur Validierung an mich zurückgegeben werden.
+Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das Skript `build-windows.cmd` genutzt werden. Es versucht, die Windows-Desktop-Workload zu installieren und führt anschließend `dotnet build` sowie `dotnet test` aus. Die Konsolenausgabe des Skripts kann zur Validierung an mich zurückgegeben werden.
 
 Antworte immer auf deutsch!
