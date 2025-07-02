@@ -2,8 +2,8 @@
 title: ZENTRALE_ANWEISUNGSDATEI.md - Anweisungen zur Arbeitszeiterfassung
 description: Zentrale Anweisungsdatei bei der Entwicklung der Arbeitszeiterfassungsanwendung
 author: Tanja Trella
-version: 1.0
-lastUpdated: 26.01.2025
+version: 1.8
+lastUpdated: 26.06.2025
 category: Konfiguration
 ---
 
@@ -25,10 +25,14 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 2. **Prompts/** – Ordner mit 5 detaillierten Einzelprompts für die ersten Schritte
 3. **Arbeitsplan_Bewertung.md** – Kritische Bewertung und Optimierungen
 4. **Zusammenfassung_Arbeitsplan.md** – Executive Summary
+5. **Konfigurationsmanagement** – ConfigurationManager und App.config eingerichtet
+6. **Repository Pattern** – Generische Repositories und UnitOfWork (Schritt 2.1)
+7. **Offline-Synchronisation** – Erste Vorbereitung mit SQLite (Schritt 2.2)
+8. **Benutzerauthentifizierung** – Windows-Login mit IP-Pruefung (Schritt 3.1)
 
 ### Nächste Schritte:
-- **Aktuell**: Schritt 1.1 – Projekt-Setup und Verzeichnisstruktur
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
+- **Aktuell**: Schritt 3.2 – Zeiterfassungslogik implementiert, Tests müssen unter Windows ausgeführt werden (`build-windows.cmd > build-log.txt`)
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
 
 ## Entwicklungsrichtlinien
 
@@ -59,7 +63,7 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 │   ├── Schritt_1_1_Projekt_Setup.md
 │   ├── Schritt_1_2_Datenbankdesign.md
 │   ├── Schritt_2_1_Repository_Pattern.md
-│   ├── Schritt_3_1_Benutzerauthentifizierung.md
+│   ├── Schritt_3_2_Zeiterfassungslogik.md
 │   └── Schritt_4_1_Hauptfenster.md
 └── Arbeitszeiterfassung/ (wird erstellt)
     ├── Arbeitszeiterfassung.sln
@@ -122,7 +126,7 @@ ls -la
 ## Hilfreiche Referenzen
 
 - **Hauptplan**: `/app/AZE/Arbeitsplan_Arbeitszeiterfassung.md`
-- **Nächster Prompt**: `/app/AZE/Prompts/Schritt_1_1_Projekt_Setup.md`
+- **Nächster Prompt**: `/app/AZE/Prompts/Schritt_2_2_Offline_Synchronisation.md`
 - **Bewertung**: `/app/AZE/Arbeitsplan_Bewertung.md`
 
 ## Spezielle Hinweise
@@ -132,5 +136,8 @@ ls -la
 3. **Sicherheit**: Keine Passwörter im Code, nur Windows-Auth
 4. **Performance**: Lazy Loading vermeiden, Eager Loading bevorzugen
 5. **Testing**: **Immer 100% Code Coverage sicherstellen**
+6. **Tests in Codex**: Kannst du Tests oder Prüfungen nicht selbst ausführen,
+   erstelle Befehle oder Skripte für den Benutzer. Dieser führt sie auf dem
+   Zielsystem aus und gibt dir die Ausgabe zurück.
 
 Diese Datei dient als zentraler Einstiegspunkt für jede neue Session!
