@@ -249,6 +249,7 @@ echo 1. Visual Studio oeffnen: Arbeitszeiterfassung.sln
 echo 2. Schritt 1.2 ausfuehren (Datenbankdesign)
 echo 3. Prompt verwenden: ..\Prompts\Schritt_1_2_Datenbankdesign.md
 echo.
+echo 4. README.md im Projektstamm bei relevanten Änderungen aktualisieren
 echo Hinweis: Das Projekt verwendet .NET 8.0 (LTS)
 
 pause

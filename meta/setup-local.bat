@@ -73,7 +73,9 @@ echo Naechste Schritte:
 echo 1. Falls alle Voraussetzungen erfuellt:
 echo    init-projekt.bat
 echo.
-echo 2. Falls Fehler vorhanden:
+echo 2. README.md im Projektstamm bei relevanten Änderungen aktualisieren
+echo.
+echo 3. Falls Fehler vorhanden:
 echo    Installieren Sie die fehlenden Komponenten
 echo    und wiederholen Sie init-projekt.bat
 echo.

@@ -164,7 +164,7 @@ if %ERRORS%==0 (
         echo Naechste Schritte:
         echo 1. Kopieren Sie die AZE-Dateien auf lokales Laufwerk
         echo 2. Fuehren Sie init-projekt.bat aus
-    ) else (
+        echo 3. README.md im Projektstamm bei relevanten Änderungen aktualisieren
         echo + Grundvoraussetzungen erfuellt
         echo ! %WARNINGS% Warnung(en) vorhanden
         echo.
