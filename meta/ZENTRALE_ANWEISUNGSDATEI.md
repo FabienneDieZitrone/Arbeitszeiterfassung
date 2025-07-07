@@ -119,6 +119,7 @@ ls -la
 2. **Bei Code-Änderungen**: Kommentare aktualisieren
 3. **Nach Feature-Completion**: Dokumentation updaten (auch die ZENTRALE_ANWEISUNGSDATEI.md)
 4. **Vor Schritt-Abschluss**: Code-Review durchführen
+5. **Benutzerbestätigung**: Ein Schritt gilt erst nach positiver Rückmeldung des Benutzers über erfolgreiche Tests auf dem Zielsystem als abgeschlossen.
 
 ## Hilfreiche Referenzen
 
