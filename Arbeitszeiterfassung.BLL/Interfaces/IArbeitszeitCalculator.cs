@@ -9,6 +9,7 @@ Beschreibung: Schnittstelle fuer Berechnungen der Arbeitszeit
 */
 
 using Arbeitszeiterfassung.DAL.Models;
+using Arbeitszeiterfassung.BLL.Models;
 
 namespace Arbeitszeiterfassung.BLL.Interfaces;
 
