@@ -8,6 +8,7 @@ Datei: /Arbeitszeiterfassung.DAL/Repositories/ArbeitszeitRepository.cs
 Beschreibung: Repository fuer Arbeitszeiten.
 */
 
+using System;
 using Microsoft.EntityFrameworkCore;
 using Arbeitszeiterfassung.DAL.Context;
 using Arbeitszeiterfassung.DAL.Interfaces;
@@ -26,5 +27,5 @@ public class ArbeitszeitRepository : GenericRepository<Arbeitszeit>, IArbeitszei
 
     public async Task<Arbeitszeit?> GetAktuelleArbeitszeitAsync(int benutzerId) =>
         await dbSet.OrderByDescending(a => a.Start)
-                    .FirstOrDefaultAsync(a => a.BenutzerId == benutzerId && a.Ende == null);
+                    .FirstOrDefaultAsync(a => a.BenutzerId == benutzerId && a.Stopp == DateTime.MinValue);
 }

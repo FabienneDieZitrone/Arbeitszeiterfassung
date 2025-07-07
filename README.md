@@ -1,6 +1,6 @@
 ---
 title: README
-version: 1.3
+version: 1.8
 lastUpdated: 26.06.2025
 author: Tanja Trella
 status: In Bearbeitung
