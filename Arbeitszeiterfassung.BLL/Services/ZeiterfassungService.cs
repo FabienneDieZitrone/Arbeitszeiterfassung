@@ -13,7 +13,7 @@ using Arbeitszeiterfassung.BLL.Events;
 using Arbeitszeiterfassung.BLL.Helpers;
 using Arbeitszeiterfassung.BLL.Models;
 using Arbeitszeiterfassung.DAL.Models;
-using Arbeitszeiterfassung.DAL.UnitOfWork;
+using Arbeitszeiterfassung.DAL.Interfaces;
 using System.Linq;
 
 namespace Arbeitszeiterfassung.BLL.Services;

@@ -213,6 +213,7 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "1. Visual Studio öffnen: Start-Process 'Arbeitszeiterfassung.sln'" -ForegroundColor White
     Write-Host "2. Schritt 1.2 ausführen (Datenbankdesign)" -ForegroundColor White
     Write-Host "3. Prompt verwenden: ..\Prompts\Schritt_1_2_Datenbankdesign.md" -ForegroundColor White
+Write-Host "4. README.md im Projektstamm bei relevanten Änderungen aktualisieren" -ForegroundColor White
 }
 else {
     Write-Host "❌ Build-Fehler!" -ForegroundColor Red

@@ -46,6 +46,7 @@ echo Naechste Schritte:
 echo 1. cd /d C:\Temp\AZE
 echo 2. quick-check.bat
 echo 3. init-projekt.bat
+echo 4. README.md im Projektstamm bei relevanten Änderungen aktualisieren
 echo.
 
 echo Soll automatisch zu %TARGET% gewechselt werden? (J/N)

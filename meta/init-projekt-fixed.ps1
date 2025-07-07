@@ -265,6 +265,7 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "2. Führen Sie Schritt 1.2 aus: Datenbankdesign und Entity-Modelle" -ForegroundColor White
     Write-Host "3. Verwenden Sie den Prompt: ..\Prompts\Schritt_1_2_Datenbankdesign.md" -ForegroundColor White
     Write-Host ""
+    Write-Host "4. README.md im Projektstamm bei relevanten Änderungen aktualisieren" -ForegroundColor White
     Write-Host "Zum Öffnen in Visual Studio:" -ForegroundColor Yellow
     Write-Host "  cd '$baseDir'" -ForegroundColor White
     Write-Host "  Start-Process 'Arbeitszeiterfassung.sln'" -ForegroundColor White

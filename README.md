@@ -1,7 +1,7 @@
 ---
 title: README
-version: 1.8
-lastUpdated: 26.06.2025
+version: 1.9
+lastUpdated: 07.07.2025
 author: Tanja Trella
 status: In Bearbeitung
 file: /README.md
@@ -23,8 +23,8 @@ Die Basis-Struktur mit BLL, DAL und UI steht. Das Konfigurationsmanagement (Schr
 
 ## Naechste Schritte
 1. Visual Studio oeffnen: `start Arbeitszeiterfassung.sln`
-2. Schritt 3.1 ausfuehren (Benutzerauthentifizierung)
-3. Prompt verwenden: `..\Prompts\Schritt_3_1_Benutzerauthentifizierung.md`
+2. Schritt 3.3 ausfuehren (Rollenbasierte Zugriffskontrolle)
+3. Prompt verwenden: `..\Prompts\Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
 
 ## Codex Setup Script
 

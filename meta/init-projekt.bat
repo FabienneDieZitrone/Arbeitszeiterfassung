@@ -218,5 +218,6 @@ echo Nächste Schritte:
 echo 1. Visual Studio öffnen: start Arbeitszeiterfassung.sln
 echo 2. Schritt 1.2 ausführen (Datenbankdesign)
 echo 3. Prompt verwenden: ..\Prompts\Schritt_1_2_Datenbankdesign.md
+echo 4. README.md im Projektstamm bei relevanten Änderungen aktualisieren
 echo.
 pause
