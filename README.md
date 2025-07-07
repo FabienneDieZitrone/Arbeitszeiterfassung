@@ -40,4 +40,8 @@ Danach steht `dotnet` mit Version 8 automatisch zur Verfügung.
 
 Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das Skript `build-windows.cmd` genutzt werden. Es installiert die erforderliche Windows-Desktop-Workload und führt anschliessend `dotnet build` sowie `dotnet test` aus. Die Konsolenausgabe des Skripts kann zur Validierung an mich zurückgegeben werden.
 
+## Schrittabschluss
+
+Ein Schritt gilt erst als vollendet, wenn der Benutzer die entsprechenden Änderungen auf seinem Zielsystem getestet und positiv bestätigt hat. Solange diese Rückmeldung fehlt, wird der Schritt nicht als abgeschlossen markiert.
+
 Antworte immer auf deutsch!
