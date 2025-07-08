@@ -28,6 +28,7 @@ public class GenehmigungsDashboard
 
     public async Task<DashboardData> GetDashboardDataAsync(int genehmigerId)
     {
+
         var offene = await service.GetOffeneAntraegeAsync(genehmigerId);
 
         return new DashboardData

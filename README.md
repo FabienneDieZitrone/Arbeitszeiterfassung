@@ -87,6 +87,7 @@ Arbeitszeiterfassung Projekt Test
 ✓ DAL/Entities existiert
 ✓ DAL/Migrations existiert
 ✓ DAL/Repositories existiert
+
 ✓ Alle Tests bestanden!
 ```
 
