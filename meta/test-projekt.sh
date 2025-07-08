@@ -1,8 +1,8 @@
 #!/bin/bash
 # ---
 # title: Test-Skript für Projektinitialisierung
-# version: 1.0
-# lastUpdated: 26.01.2025
+# version: 1.1
+# lastUpdated: 09.07.2025
 # author: Tanja Trella
 # status: Final
 # file: /app/AZE/test-projekt.sh
@@ -21,7 +21,13 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Basis-Verzeichnis (überschreibbar per Umgebungsvariable BASE_DIR)
+# Fallback auf Verzeichnis der Skriptdatei, falls /app/AZE/ nicht existiert
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ALT_DIR="$SCRIPT_DIR/.."
+if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
+    BASE_DIR="$ALT_DIR"
+fi
 
 # Funktion für Erfolg/Fehler-Ausgabe
 check_result() {
@@ -46,6 +52,8 @@ else
     check_result 1 "Hauptverzeichnis fehlt"
     echo -e "${RED}Abbruch: Projekt wurde noch nicht initialisiert!${NC}"
     echo "Führen Sie zuerst aus: bash /app/AZE/init-projekt.sh"
+    echo "Oder starten Sie das Skript mit der Umgebungsvariable BASE_DIR"
+    echo "z.B.: BASE_DIR=/pfad/zum/Projekt bash meta/test-projekt.sh"
     exit 1
 fi
 
