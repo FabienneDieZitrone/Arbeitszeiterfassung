@@ -1,8 +1,8 @@
 #!/bin/bash
 # ---
 # title: Test-Skript für Projektinitialisierung
-# version: 1.0
-# lastUpdated: 26.01.2025
+# version: 1.1
+# lastUpdated: 09.07.2025
 # author: Tanja Trella
 # status: Final
 # file: /app/AZE/test-projekt.sh
@@ -24,7 +24,9 @@ NC='\033[0m' # No Color
 # Fallback auf Verzeichnis der Skriptdatei, falls /app/AZE/ nicht existiert
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 ALT_DIR="$SCRIPT_DIR/../Arbeitszeiterfassung"
+
 if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
     BASE_DIR="$ALT_DIR"
 fi
