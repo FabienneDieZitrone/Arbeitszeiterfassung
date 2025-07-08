@@ -85,9 +85,11 @@ public class ApplicationDbContext : DbContext
         });
 
         modelBuilder.Entity<Rolle>().HasData(
-            new Rolle { RolleId = 1, Bezeichnung = "Admin", Berechtigungsstufe = Berechtigungsstufe.Stufe5, Beschreibung = "Administrator" },
-            new Rolle { RolleId = 2, Bezeichnung = "Mitarbeiter", Berechtigungsstufe = Berechtigungsstufe.Stufe1, Beschreibung = "Standardbenutzer" },
-            new Rolle { RolleId = 3, Bezeichnung = "Manager", Berechtigungsstufe = Berechtigungsstufe.Stufe3, Beschreibung = "Teamleitung" }
+            new Rolle { RolleId = 1, Bezeichnung = "Admin", Berechtigungsstufe = Berechtigungsstufe.Admin, Beschreibung = "Administrator" },
+            new Rolle { RolleId = 2, Bezeichnung = "Mitarbeiter", Berechtigungsstufe = Berechtigungsstufe.Mitarbeiter, Beschreibung = "Standardbenutzer" },
+            new Rolle { RolleId = 3, Bezeichnung = "Honorarkraft", Berechtigungsstufe = Berechtigungsstufe.Honorarkraft, Beschreibung = "Externe Kraft" },
+            new Rolle { RolleId = 4, Bezeichnung = "Standortleiter", Berechtigungsstufe = Berechtigungsstufe.Standortleiter, Beschreibung = "Leitung eines Standorts" },
+            new Rolle { RolleId = 5, Bezeichnung = "Bereichsleiter", Berechtigungsstufe = Berechtigungsstufe.Bereichsleiter, Beschreibung = "Leitung eines Bereichs" }
         );
     }
 }

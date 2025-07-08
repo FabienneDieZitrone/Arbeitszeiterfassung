@@ -15,9 +15,9 @@ namespace Arbeitszeiterfassung.Common.Enums;
 /// </summary>
 public enum Berechtigungsstufe
 {
-    Stufe1 = 1,
-    Stufe2 = 2,
-    Stufe3 = 3,
-    Stufe4 = 4,
-    Stufe5 = 5
+    Mitarbeiter = 1,
+    Honorarkraft = 2,
+    Standortleiter = 3,
+    Bereichsleiter = 4,
+    Admin = 5
 }
