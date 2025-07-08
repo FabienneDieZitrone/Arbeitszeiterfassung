@@ -38,6 +38,7 @@ Der Prompt dafür ist in: Prompts/Schritt_1_1_Projekt_Setup.md
 - [ ] Aktuellen Schritt identifiziert
 - [ ] Entsprechenden Prompt geöffnet
 - [ ] Entwicklungsumgebung bereit
+- [ ] `meta/test-projekt.sh` auf dem Zielsystem ausgeführt und Ergebnis notiert
 
 ## 🎯 Direkt-Prompts für häufige Aufgaben
 
@@ -107,5 +108,9 @@ cat /app/AZE/Arbeitsplan_Arbeitszeiterfassung.md
 # Bewertung lesen:
 cat /app/AZE/Arbeitsplan_Bewertung.md
 ```
+
+## Schrittabschluss
+
+Ein Entwicklungsschritt gilt erst als abgeschlossen, wenn er auf deinem Zielsystem erfolgreich getestet wurde. Führe dazu `meta/test-projekt.sh` (Linux/WSL) oder `build-windows.cmd` (Windows) aus und sende mir die Konsolenausgabe als Bestätigung.
 
 **Tipp**: Beginne immer mit dem Lesen der ZENTRALE_ANWEISUNGSDATEI.md!
