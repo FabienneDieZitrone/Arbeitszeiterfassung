@@ -7,7 +7,10 @@ Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.BLL/Workflow/GenehmigungsDashboard.cs
 Beschreibung: Aufbereitung der Dashboard-Daten
 */
+using System;
+using System.Linq;
 using Arbeitszeiterfassung.BLL.Models;
+using Arbeitszeiterfassung.BLL.Interfaces;
 
 namespace Arbeitszeiterfassung.BLL.Workflow;
 
@@ -16,9 +19,22 @@ namespace Arbeitszeiterfassung.BLL.Workflow;
 /// </summary>
 public class GenehmigungsDashboard
 {
-    public Task<DashboardData> GetDashboardDataAsync(int genehmigerId)
+    private readonly IGenehmigungService service;
+
+    public GenehmigungsDashboard(IGenehmigungService service)
     {
-        DashboardData data = new();
-        return Task.FromResult(data);
+        this.service = service;
+    }
+
+    public async Task<DashboardData> GetDashboardDataAsync(int genehmigerId)
+    {
+        var offene = await service.GetOffeneAntraegeAsync(genehmigerId);
+
+        return new DashboardData
+        {
+            OffeneAntraege = offene.Cast<object>(),
+            AnzahlOffen = offene.Count(),
+            AnzahlUeberfaellig = offene.Count(a => (DateTime.UtcNow - a.GeaendertAm).TotalDays > 2)
+        };
     }
 }
