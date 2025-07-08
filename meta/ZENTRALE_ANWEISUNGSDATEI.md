@@ -36,8 +36,47 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 - **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md`
 
 ### Prüfergebnisse
-Die letzte Ausführung von `dotnet build` und `dotnet test` auf dem Zielsystem war erfolgreich. Es traten dabei 6 Warnungen auf (CA1416, CS0067); alle 6 Tests bestanden.
-Nach Korrekturen baut das Projekt nun ohne Warnungen.
+Aktueller Testlauf mittels `meta/test-projekt.sh`:
+```
+✓ Hauptverzeichnis existiert
+✓ Solution-Datei vorhanden
+✓ Projekt Arbeitszeiterfassung.Common existiert
+✓ Projekt Arbeitszeiterfassung.DAL existiert
+✓ Projekt Arbeitszeiterfassung.BLL existiert
+✓ Projekt Arbeitszeiterfassung.UI existiert
+✓ Projekt Arbeitszeiterfassung.Tests existiert
+✓ DAL referenziert Common
+✓ BLL referenziert Common
+✓ BLL referenziert DAL
+✓ UI referenziert Common
+✓ UI referenziert DAL
+✓ UI referenziert BLL
+✓ appsettings.json vorhanden
+✓ .gitignore vorhanden
+✓ Entity Framework Core in DAL
+✓ Configuration Extensions in Common
+✓ xUnit in Tests
+✓ Arbeitszeiterfassung.Common lässt sich bauen
+✓ Arbeitszeiterfassung.DAL lässt sich bauen
+✓ Arbeitszeiterfassung.BLL lässt sich bauen
+✓ Arbeitszeiterfassung.Tests lässt sich bauen
+✓ UI-Projekt vorhanden
+✓ Arbeitszeiterfassung.Common wurde gebaut
+✓ Arbeitszeiterfassung.DAL wurde gebaut
+✓ Arbeitszeiterfassung.BLL wurde gebaut
+✓ Arbeitszeiterfassung.Tests wurde gebaut
+✓ Unit-Tests erfolgreich
+✓ Common/Configuration existiert
+✓ Common/Enums existiert
+✓ Common/Extensions existiert
+✓ Common/Helpers existiert
+✓ Common/Models existiert
+✓ DAL/Context existiert
+✓ DAL/Entities existiert
+✓ DAL/Migrations existiert
+✓ DAL/Repositories existiert
+✓ Alle Tests bestanden!
+```
 
 ## Entwicklungsrichtlinien
 

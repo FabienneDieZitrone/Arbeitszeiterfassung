@@ -21,11 +21,22 @@ public class AenderungsValidator : IAenderungsValidator
     public Task<ValidationResult> ValidateAenderungAsync(Arbeitszeit original, ArbeitszeitAenderung aenderung)
     {
         ValidationResult result = new();
-        if (aenderung.NeueStartzeit.HasValue && aenderung.NeueStoppzeit.HasValue &&
-            aenderung.NeueStartzeit >= aenderung.NeueStoppzeit)
+
+        if (aenderung.NeueStartzeit.HasValue && aenderung.NeueStoppzeit.HasValue)
         {
-            result.Errors.Add("Stoppzeit muss nach Startzeit liegen");
+            if (aenderung.NeueStartzeit >= aenderung.NeueStoppzeit)
+                result.Errors.Add("Stoppzeit muss nach Startzeit liegen");
+
+            var dauer = aenderung.NeueStoppzeit.Value - aenderung.NeueStartzeit.Value;
+            if (dauer.TotalHours > 12)
+                result.Errors.Add("Arbeitszeit darf 12 Stunden nicht überschreiten");
         }
+
+        // Rueckwirkende Aenderungen nur bis 7 Tage
+        var tageZurueck = (DateTime.Today - original.Start.Date).Days;
+        if (tageZurueck > 7)
+            result.Errors.Add("Änderungen sind nur bis 7 Tage rückwirkend möglich");
+
         return Task.FromResult(result);
     }
 }
