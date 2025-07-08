@@ -36,8 +36,13 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 - **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md`
 
 ### Prüfergebnisse
-Die letzte Ausführung von `dotnet build` und `dotnet test` auf dem Zielsystem war erfolgreich. Es traten dabei 6 Warnungen auf (CA1416, CS0067); alle 6 Tests bestanden.
-Nach Korrekturen baut das Projekt nun ohne Warnungen.
+Aktueller Testlauf mittels `meta/test-projekt.sh`:
+```
+✓ Hauptverzeichnis existiert
+✓ Solution-Datei vorhanden
+...
+✓ Alle Tests bestanden!
+```
 
 ## Entwicklungsrichtlinien
 

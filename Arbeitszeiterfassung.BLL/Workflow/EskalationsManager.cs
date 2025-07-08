@@ -7,7 +7,10 @@ Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.BLL/Workflow/EskalationsManager.cs
 Beschreibung: Kuemmert sich um Eskalationen
 */
+using System;
+using System.Linq;
 using Arbeitszeiterfassung.BLL.Interfaces;
+using Arbeitszeiterfassung.DAL.Models;
 
 namespace Arbeitszeiterfassung.BLL.Workflow;
 
@@ -16,5 +19,22 @@ namespace Arbeitszeiterfassung.BLL.Workflow;
 /// </summary>
 public class EskalationsManager : IEskalationsManager
 {
-    public Task PruefeUndEskaliereAsync() => Task.CompletedTask;
+    private readonly IGenehmigungService service;
+    private readonly INotificationService notification;
+
+    public EskalationsManager(IGenehmigungService service, INotificationService notification)
+    {
+        this.service = service;
+        this.notification = notification;
+    }
+
+    public async Task PruefeUndEskaliereAsync()
+    {
+        var offene = await service.GetOffeneAntraegeAsync(0);
+        foreach (var antrag in offene.Where(a => (DateTime.UtcNow - a.GeaendertAm).TotalDays > 5))
+        {
+            var bereichsleiter = new Benutzer { BenutzerId = 0 };
+            await notification.SendeEskalationAsync(antrag, bereichsleiter);
+        }
+    }
 }

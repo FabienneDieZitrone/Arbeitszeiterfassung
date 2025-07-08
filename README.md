@@ -47,15 +47,13 @@ Für Linux/WSL-Systeme steht das Prüfskript `meta/test-projekt.sh` bereit. Dies
 Die letzte Ausführung auf dem Zielsystem ergab folgende Ausgabe:
 
 ```
-Build succeeded with 6 warnings (CA1416, CS0067)
-Passed!  - Failed: 0, Passed: 6
-```
-
-Nach den vorgenommenen Anpassungen baut das Projekt nun ohne Warnungen:
-
-```
-Build succeeded
-Passed!  - Failed: 0, Passed: 6
+======================================
+Arbeitszeiterfassung Projekt Test
+======================================
+✓ Hauptverzeichnis existiert
+✓ Solution-Datei vorhanden
+...
+✓ Alle Tests bestanden!
 ```
 
 ## Schrittabschluss

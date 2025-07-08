@@ -18,6 +18,21 @@ public class AutoGenehmigungsService
 {
     public Task<bool> KannAutomatischGenehmigtWerdenAsync(Aenderungsprotokoll antrag)
     {
+        var alteDauer = antrag.Stoppzeit_Alt - antrag.Startzeit_Alt;
+        var neueDauer = antrag.Stoppzeit_Neu - antrag.Startzeit_Neu;
+        var differenz = Math.Abs((neueDauer - alteDauer).TotalMinutes);
+
+        if (differenz <= 15 && !string.IsNullOrWhiteSpace(antrag.GrundText))
+        {
+            string[] erlaubte =
+            {
+                "Vergessen zu starten",
+                "Vergessen zu stoppen",
+                "Systemfehler"
+            };
+            return Task.FromResult(erlaubte.Contains(antrag.GrundText));
+        }
+
         return Task.FromResult(false);
     }
 }
