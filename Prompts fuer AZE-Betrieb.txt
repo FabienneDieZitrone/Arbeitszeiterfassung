@@ -1,5 +1,4 @@
 Analysiere die root-README.md sowie das meta Verzeichnis und insbesondere die darin enthaltene ZENTRALE_ANWEISUNGSDATEI.md
-
 Arbeite den nächsten Schritt detailliert und vollständig aus und lege den Plan zur Genehmigung der Benutzerin vor
 
 Analysiere die nachfolgende Rückmeldung und aktualisiere den Stand, inkl. der Prüfergebnisse der Tests, auch die die von der Benutzerin auf dem Zielsystem durchgeführt wurden, in README.md, der Zentralen_Anweisungsdatei.md sowie allen weiteren relevanten Dateien.
@@ -25,7 +24,5 @@ Erklärung:
 
 
 Testen auf dem Zielsystem unter Linux (WSL):
-dotnet build
-BASE_DIR=./ bash meta/test-projekt.sh
-
+optional: dotnet build
 BASE_DIR=./ ./meta/test-projekt.sh
