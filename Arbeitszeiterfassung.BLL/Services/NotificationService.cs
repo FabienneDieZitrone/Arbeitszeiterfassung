@@ -18,14 +18,26 @@ namespace Arbeitszeiterfassung.BLL.Services;
 public class NotificationService : INotificationService
 {
     public Task SendeGenehmigungsanfrageAsync(Aenderungsprotokoll antrag, Benutzer genehmiger)
-        => Task.CompletedTask;
+    {
+        Console.WriteLine($"Genehmigungsanfrage an {genehmiger.BenutzerId} für Änderung {antrag.AenderungsprotokollId}");
+        return Task.CompletedTask;
+    }
 
     public Task SendeGenehmigungsentscheidungAsync(Aenderungsprotokoll antrag, bool genehmigt)
-        => Task.CompletedTask;
+    {
+        Console.WriteLine($"Genehmigungsentscheidung für {antrag.AenderungsprotokollId}: {(genehmigt ? "genehmigt" : "abgelehnt")}");
+        return Task.CompletedTask;
+    }
 
     public Task SendeEskalationAsync(Aenderungsprotokoll antrag, Benutzer neuerGenehmiger)
-        => Task.CompletedTask;
+    {
+        Console.WriteLine($"Eskalation an {neuerGenehmiger.BenutzerId} für Änderung {antrag.AenderungsprotokollId}");
+        return Task.CompletedTask;
+    }
 
     public Task SendeErinnerungAsync(IEnumerable<Aenderungsprotokoll> offeneAntraege)
-        => Task.CompletedTask;
+    {
+        Console.WriteLine($"Erinnerung für {offeneAntraege.Count()} offene Anträge");
+        return Task.CompletedTask;
+    }
 }
