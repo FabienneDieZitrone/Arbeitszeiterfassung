@@ -24,7 +24,6 @@ NC='\033[0m' # No Color
 # Fallback auf Verzeichnis der Skriptdatei, falls /app/AZE/ nicht existiert
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
 ALT_DIR="$SCRIPT_DIR/.."
 
 if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
@@ -153,12 +152,26 @@ if [ $BUILD_RESULT -eq 0 ]; then
             check_result 1 "Arbeitszeiterfassung.$proj wurde gebaut"
         fi
     done
+
+    # Unit-Tests ausführen
+    echo ""
+    echo -e "${YELLOW}6. Fuehre Unit-Tests aus...${NC}"
+    dotnet test Arbeitszeiterfassung.Tests/Arbeitszeiterfassung.Tests.csproj --no-build --nologo > /tmp/unit_tests.log 2>&1
+    if [ $? -eq 0 ]; then
+        check_result 0 "Unit-Tests erfolgreich"
+    else
+        check_result 1 "Unit-Tests fehlgeschlagen"
+        cat /tmp/unit_tests.log
+    fi
+else
+    echo ""
+    echo -e "${RED}Build fehlgeschlagen – Tests werden uebersprungen${NC}"
 fi
 
 echo ""
 
-# 6. Prüfe Ordnerstruktur
-echo -e "${YELLOW}6. Prüfe Ordnerstruktur...${NC}"
+# 7. Prüfe Ordnerstruktur
+echo -e "${YELLOW}7. Prüfe Ordnerstruktur...${NC}"
 
 # Common
 for folder in "Configuration" "Enums" "Extensions" "Helpers" "Models"; do
@@ -174,7 +187,7 @@ done
 
 echo ""
 
-# 7. Zusammenfassung
+# 8. Zusammenfassung
 echo -e "${YELLOW}======================================"
 echo "Test-Zusammenfassung"
 echo -e "======================================${NC}"
