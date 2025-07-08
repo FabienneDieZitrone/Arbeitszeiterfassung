@@ -10,12 +10,14 @@ Beschreibung: Hilfsklasse zur Verschluesselung sensibler Daten mittels DPAPI.
 
 using System.Security.Cryptography;
 using System.Text;
+using System.Runtime.Versioning;
 
 namespace Arbeitszeiterfassung.Common.Helpers;
 
 /// <summary>
 /// Stellt einfache Methoden zur Verschluesselung und Entschluesselung bereit.
 /// </summary>
+[SupportedOSPlatform("windows")]
 public static class EncryptionHelper
 {
     public static string Encrypt(string plainText)

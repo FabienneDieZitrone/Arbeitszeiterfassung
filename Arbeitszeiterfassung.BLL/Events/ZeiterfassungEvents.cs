@@ -26,4 +26,10 @@ public class ZeiterfassungEvents
 
     internal void RaiseArbeitszeitGestoppt(Arbeitszeit eintrag)
         => ArbeitszeitGestoppt?.Invoke(this, new ArbeitszeitStoppedEventArgs(eintrag));
+
+    internal void RaiseUeberstundenWarnung(decimal stunden)
+        => UeberstundenWarnung?.Invoke(this, new UeberstundenWarningEventArgs(stunden));
+
+    internal void RaisePausenzeitWarnung(TimeSpan fehlendePause)
+        => PausenzeitWarnung?.Invoke(this, new PausenzeitWarningEventArgs(fehlendePause));
 }

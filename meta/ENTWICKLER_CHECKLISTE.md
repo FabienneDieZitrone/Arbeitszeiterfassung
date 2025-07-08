@@ -1,7 +1,7 @@
 ---
 title: Entwickler-Checkliste für Arbeitszeiterfassung
-version: 1.0
-lastUpdated: 26.01.2025
+version: 1.1
+lastUpdated: 08.07.2025
 author: Tanja Trella
 status: Final
 file: /app/AZE/ENTWICKLER_CHECKLISTE.md
