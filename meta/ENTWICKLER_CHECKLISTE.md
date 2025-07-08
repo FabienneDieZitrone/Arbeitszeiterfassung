@@ -73,11 +73,11 @@ Diese Checkliste führt Sie durch alle 19 Entwicklungsschritte mit konkreten Pr�
 - [ ] Tagesabschluss-Logik
 - [ ] Arbeitszeitberechnung
 
-### ☐ Schritt 3.3: Rollenbasierte Zugriffskontrolle
-- [ ] 5 Rollen definiert
-- [ ] Berechtigungsmatrix implementiert
-- [ ] Authorize-Attribute gesetzt
-- [ ] Rollen-Service funktioniert
+### ☑ Schritt 3.3: Rollenbasierte Zugriffskontrolle
+- [x] 5 Rollen definiert
+- [x] Berechtigungsmatrix implementiert
+- [x] Authorize-Attribute gesetzt
+- [x] Rollen-Service funktioniert
 
 ### ☐ Schritt 3.4: Genehmigungsworkflow
 - [ ] Antragserstellung

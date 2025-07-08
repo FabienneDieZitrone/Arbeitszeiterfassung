@@ -18,4 +18,10 @@ namespace Arbeitszeiterfassung.DAL.Interfaces;
 public interface IBenutzerRepository : IRepository<Benutzer>
 {
     Task<Benutzer?> GetBenutzerByUsernameAsync(string username);
+    Task<Benutzer?> GetStandortleiterAsync(int standortId);
+    Task<Benutzer?> GetBereichsleiterAsync();
+    Task<IEnumerable<int>> GetAllUserIdsAsync();
+    Task<IEnumerable<int>> GetUserIdsByStandorteAsync(IEnumerable<int> standortIds);
+    Task<Benutzer?> GetBenutzerMitRolleAsync(int id);
+    Task<Benutzer?> GetBenutzerMitDetailsAsync(int id);
 }
