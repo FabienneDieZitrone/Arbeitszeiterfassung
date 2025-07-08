@@ -24,7 +24,9 @@ NC='\033[0m' # No Color
 # Fallback auf Verzeichnis der Skriptdatei, falls /app/AZE/ nicht existiert
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ALT_DIR="$SCRIPT_DIR/.."
+
+ALT_DIR="$SCRIPT_DIR/../Arbeitszeiterfassung"
+
 if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
     BASE_DIR="$ALT_DIR"
 fi
