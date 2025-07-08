@@ -1,7 +1,7 @@
 #!/bin/bash
 # ---
 # title: Test-Skript für Projektinitialisierung
-# version: 1.1
+# version: 1.2
 # lastUpdated: 09.07.2025
 # author: Tanja Trella
 # status: Final
@@ -25,7 +25,7 @@ NC='\033[0m' # No Color
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-ALT_DIR="$SCRIPT_DIR/../Arbeitszeiterfassung"
+ALT_DIR="$SCRIPT_DIR/.."
 
 if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
     BASE_DIR="$ALT_DIR"
@@ -183,8 +183,8 @@ if [ $ERRORS -eq 0 ]; then
     echo -e "${GREEN}✓ Alle Tests bestanden!${NC}"
     echo ""
     echo "Das Projekt ist bereit für die Entwicklung."
-    echo "Nächster Schritt: Implementierung des Datenbankdesigns"
-    echo "Verwenden Sie: /app/AZE/Prompts/Schritt_1_2_Datenbankdesign.md"
+    echo "Nächster Schritt: Genehmigungsworkflow umsetzen"
+    echo "Verwenden Sie: /app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md"
 else
     echo -e "${RED}✗ $ERRORS Test(s) fehlgeschlagen!${NC}"
     echo ""
