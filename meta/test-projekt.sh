@@ -25,6 +25,7 @@ NC='\033[0m' # No Color
 BASE_DIR="${BASE_DIR:-/app/AZE/Arbeitszeiterfassung}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ALT_DIR="$SCRIPT_DIR/.."
+
 if [ ! -d "$BASE_DIR" ] && [ -d "$ALT_DIR" ]; then
     BASE_DIR="$ALT_DIR"
 fi
