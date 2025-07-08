@@ -32,7 +32,8 @@ public class GenehmigungsDashboard
 
         return new DashboardData
         {
-            OffeneAntraege = offene,
+            OffeneAntraege = offene.Cast<object>(),
+
             AnzahlOffen = offene.Count(),
             AnzahlUeberfaellig = offene.Count(a => (DateTime.UtcNow - a.GeaendertAm).TotalDays > 2)
         };
