@@ -81,6 +81,7 @@ Das Projekt ist bereit für die Entwicklung.
 Nächster Schritt: Genehmigungsworkflow umsetzen
 Verwenden Sie: /app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md
 
+
 ## Entwicklungsrichtlinien
 
 ### Code-Stil:

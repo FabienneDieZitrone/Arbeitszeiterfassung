@@ -22,12 +22,13 @@ public class GenehmigungsDashboard
     private readonly IGenehmigungService service;
 
     public GenehmigungsDashboard(IGenehmigungService service)
-    {
+   {
         this.service = service;
     }
 
     public async Task<DashboardData> GetDashboardDataAsync(int genehmigerId)
     {
+
         var offene = await service.GetOffeneAntraegeAsync(genehmigerId);
 
         return new DashboardData
