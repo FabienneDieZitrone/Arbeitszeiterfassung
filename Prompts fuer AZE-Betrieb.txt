@@ -1,0 +1,31 @@
+Analysiere die root-README.md sowie das meta Verzeichnis und insbesondere die darin enthaltene ZENTRALE_ANWEISUNGSDATEI.md
+
+Arbeite den nächsten Schritt detailliert und vollständig aus und lege den Plan zur Genehmigung der Benutzerin vor
+
+Analysiere die nachfolgende Rückmeldung und aktualisiere den Stand, inkl. der Prüfergebnisse der Tests, auch die die von der Benutzerin auf dem Zielsystem durchgeführt wurden, in README.md, der Zentralen_Anweisungsdatei.md sowie allen weiteren relevanten Dateien.
+
+
+
+Die Nachfolgende Rückmeldung verwirrt mich, denn als nächster Schritt wird ein schon längst erledigter Schritt angezeigt --> Ist tatsächlich der aktuelle Stand des Projektes und die letzten Änderungen  geprüft worden verifiziert?:
+
+
+GIT:
+✅ Nur den Branch hart zurücksetzen auf dem Zielsystem unter Linux (WSL):
+Wenn du dein aktuelles Repo behalten willst, aber alle Änderungen verwerfen und den Stand von origin/main wiederherstellen möchtest:
+
+cd "/mnt/c/Users/Tanja Trella/source/repos/Arbeitszeiterfassung" && git fetch origin && git reset --hard origin/main && git clean -fd
+
+Erklärung:
+    cd C:\Users\Tanja Trella\source\repos\Arbeitszeiterfassung: wechselt in das (richtige) Arbeitsverzeichnis für git
+    git fetch origin: Holt den aktuellen Stand vom Remote-Repo.
+    git reset --hard origin/main: Setzt deinen lokalen Branch auf den Stand von origin/main zurück, löscht aber auch lokale Commits.
+    git clean -fd: Entfernt unversionierte Dateien und Ordner (also z.B. temporäre Dateien, Build-Outputs etc.).
+
+
+
+
+Testen auf dem Zielsystem unter Linux (WSL):
+dotnet build
+BASE_DIR=./ bash meta/test-projekt.sh
+
+BASE_DIR=./ ./meta/test-projekt.sh
