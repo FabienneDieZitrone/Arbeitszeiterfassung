@@ -28,12 +28,12 @@ public class GenehmigungsDashboard
 
     public async Task<DashboardData> GetDashboardDataAsync(int genehmigerId)
     {
+
         var offene = await service.GetOffeneAntraegeAsync(genehmigerId);
 
         return new DashboardData
         {
-            OffeneAntraege = offene.Cast<object>(),
-
+            OffeneAntraege = offene,
             AnzahlOffen = offene.Count(),
             AnzahlUeberfaellig = offene.Count(a => (DateTime.UtcNow - a.GeaendertAm).TotalDays > 2)
         };
