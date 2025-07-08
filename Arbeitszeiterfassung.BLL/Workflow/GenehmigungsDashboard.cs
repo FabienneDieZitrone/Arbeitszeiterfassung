@@ -22,7 +22,7 @@ public class GenehmigungsDashboard
     private readonly IGenehmigungService service;
 
     public GenehmigungsDashboard(IGenehmigungService service)
-    {
+   {
         this.service = service;
     }
 
