@@ -31,9 +31,9 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 8. **Benutzerauthentifizierung** – Windows-Login mit IP-Pruefung (Schritt 3.1)
 
 ### Nächste Schritte:
-- **Abgeschlossen**: Schritt 3.2 – Zeiterfassungslogik erfolgreich getestet (`build-windows.cmd`)
-- **Aktuell**: Schritt 3.3 – Rollenbasierte Zugriffskontrolle
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
+- **Abgeschlossen**: Schritt 3.3 – Rollenbasierte Zugriffskontrolle
+- **Aktuell**: Schritt 3.4 – Genehmigungsworkflow
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md`
 
 ## Entwicklungsrichtlinien
 

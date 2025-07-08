@@ -23,8 +23,8 @@ Die Basis-Struktur mit BLL, DAL und UI steht. Das Konfigurationsmanagement (Schr
 
 ## Naechste Schritte
 1. Visual Studio oeffnen: `start Arbeitszeiterfassung.sln`
-2. Schritt 3.3 ausfuehren (Rollenbasierte Zugriffskontrolle)
-3. Prompt verwenden: `..\Prompts\Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
+2. Schritt 3.4 ausfuehren (Genehmigungsworkflow)
+3. Prompt verwenden: `..\Prompts\Schritt_3_4_Genehmigungsworkflow.md`
 
 ## Codex Setup Script
 
