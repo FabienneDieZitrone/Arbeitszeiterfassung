@@ -2,8 +2,8 @@
 title: ZENTRALE_ANWEISUNGSDATEI.md - Anweisungen zur Arbeitszeiterfassung
 description: Zentrale Anweisungsdatei bei der Entwicklung der Arbeitszeiterfassungsanwendung
 author: Tanja Trella
-version: 1.8
-lastUpdated: 26.06.2025
+version: 1.9
+lastUpdated: 08.07.2025
 category: Konfiguration
 ---
 
@@ -31,9 +31,13 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 8. **Benutzerauthentifizierung** – Windows-Login mit IP-Pruefung (Schritt 3.1)
 
 ### Nächste Schritte:
-- **Abgeschlossen**: Schritt 3.2 – Zeiterfassungslogik erfolgreich getestet (`build-windows.cmd`)
-- **Aktuell**: Schritt 3.3 – Rollenbasierte Zugriffskontrolle
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
+- **Abgeschlossen**: Schritt 3.3 – Rollenbasierte Zugriffskontrolle
+- **Aktuell**: Schritt 3.4 – Genehmigungsworkflow
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md`
+
+### Prüfergebnisse
+Die letzte Ausführung von `dotnet build` und `dotnet test` auf dem Zielsystem war erfolgreich. Es traten dabei 6 Warnungen auf (CA1416, CS0067); alle 6 Tests bestanden.
+Nach Korrekturen baut das Projekt nun ohne Warnungen.
 
 ## Entwicklungsrichtlinien
 

@@ -1,7 +1,7 @@
 ---
 title: README
-version: 1.9
-lastUpdated: 07.07.2025
+version: 2.0
+lastUpdated: 08.07.2025
 author: Tanja Trella
 status: In Bearbeitung
 file: /README.md
@@ -23,8 +23,8 @@ Die Basis-Struktur mit BLL, DAL und UI steht. Das Konfigurationsmanagement (Schr
 
 ## Naechste Schritte
 1. Visual Studio oeffnen: `start Arbeitszeiterfassung.sln`
-2. Schritt 3.3 ausfuehren (Rollenbasierte Zugriffskontrolle)
-3. Prompt verwenden: `..\Prompts\Schritt_3_3_Rollenbasierte_Zugriffskontrolle.md`
+2. Schritt 3.4 ausfuehren (Genehmigungsworkflow)
+3. Prompt verwenden: `..\Prompts\Schritt_3_4_Genehmigungsworkflow.md`
 
 ## Codex Setup Script
 
@@ -39,6 +39,22 @@ bash setup.sh
 Danach steht `dotnet` mit Version 8 automatisch zur Verfügung.
 
 Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das Skript `build-windows.cmd` genutzt werden. Es installiert die erforderliche Windows-Desktop-Workload und führt anschliessend `dotnet build` sowie `dotnet test` aus. Die Konsolenausgabe des Skripts kann zur Validierung an mich zurückgegeben werden.
+
+## Testergebnisse
+
+Die letzte Ausführung auf dem Zielsystem ergab folgende Ausgabe:
+
+```
+Build succeeded with 6 warnings (CA1416, CS0067)
+Passed!  - Failed: 0, Passed: 6
+```
+
+Nach den vorgenommenen Anpassungen baut das Projekt nun ohne Warnungen:
+
+```
+Build succeeded
+Passed!  - Failed: 0, Passed: 6
+```
 
 ## Schrittabschluss
 

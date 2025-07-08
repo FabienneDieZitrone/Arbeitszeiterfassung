@@ -1,7 +1,7 @@
 /*
 Titel: HierarchicalAccessControl
-Version: 1.0
-Letzte Aktualisierung: 26.06.2025
+Version: 1.1
+Letzte Aktualisierung: 08.07.2025
 Autor: Tanja Trella
 Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.BLL/Authorization/HierarchicalAccessControl.cs
