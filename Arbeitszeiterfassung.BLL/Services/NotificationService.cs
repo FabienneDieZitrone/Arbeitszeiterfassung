@@ -7,6 +7,9 @@ Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.BLL/Services/NotificationService.cs
 Beschreibung: Implementierung des Benachrichtigungssystems
 */
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Arbeitszeiterfassung.BLL.Interfaces;
 using Arbeitszeiterfassung.DAL.Models;
 

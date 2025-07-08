@@ -10,6 +10,7 @@ Beschreibung: Daten fuer das Genehmigungsdashboard
 using System.Collections.Generic;
 
 using System.Linq;
+using Arbeitszeiterfassung.DAL.Models;
 namespace Arbeitszeiterfassung.BLL.Models;
 
 /// <summary>
@@ -17,7 +18,7 @@ namespace Arbeitszeiterfassung.BLL.Models;
 /// </summary>
 public class DashboardData
 {
-    public IEnumerable<object> OffeneAntraege { get; set; } = Enumerable.Empty<object>();
+    public IEnumerable<Aenderungsprotokoll> OffeneAntraege { get; set; } = Enumerable.Empty<Aenderungsprotokoll>();
     public int AnzahlOffen { get; set; }
     public int AnzahlUeberfaellig { get; set; }
 }
