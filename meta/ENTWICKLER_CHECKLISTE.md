@@ -79,11 +79,11 @@ Diese Checkliste führt Sie durch alle 19 Entwicklungsschritte mit konkreten Pr�
 - [x] Authorize-Attribute gesetzt
 - [x] Rollen-Service funktioniert
 
-### ☐ Schritt 3.4: Genehmigungsworkflow
-- [ ] Antragserstellung
-- [ ] Genehmigungsprozess
-- [ ] E-Mail-Benachrichtigungen
-- [ ] Historie-Tracking
+### ☑ Schritt 3.4: Genehmigungsworkflow
+- [x] Antragserstellung
+- [x] Genehmigungsprozess
+- [x] E-Mail-Benachrichtigungen
+- [x] Historie-Tracking
 
 ## ✅ Phase 4: Benutzeroberfläche (UI)
 
