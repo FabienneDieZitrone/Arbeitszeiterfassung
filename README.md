@@ -95,6 +95,6 @@ Verwenden Sie: /app/AZE/Prompts/Schritt_4_1_Hauptfenster.md
 
 ## Schrittabschluss
 
-Ein Schritt gilt erst als vollendet, wenn der Benutzer die entsprechenden Änderungen auf seinem Zielsystem getestet und positiv bestätigt hat. Solange diese Rückmeldung fehlt, wird der Schritt nicht als abgeschlossen markiert.
+Ein Schritt gilt erst als vollendet, wenn der Benutzer die entsprechenden Änderungen auf seinem Zielsystem getestet und positiv bestätigt hat. Nach jedem Schritt erfolgt außerdem eine selbstkritische Bewertung auf einer Skala von 1-10. Nur wenn keine Verbesserungsmöglichkeiten mehr offen sind und das Ergebnis die Bestnote 10 erreicht, wird der Schritt als abgeschlossen dokumentiert.
 
 Antworte immer auf deutsch!

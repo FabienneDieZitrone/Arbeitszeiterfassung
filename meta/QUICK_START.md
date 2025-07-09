@@ -111,6 +111,5 @@ cat /app/AZE/Arbeitsplan_Bewertung.md
 
 ## Schrittabschluss
 
-Ein Entwicklungsschritt gilt erst als abgeschlossen, wenn er auf deinem Zielsystem erfolgreich getestet wurde. Führe dazu `meta/test-projekt.sh` (Linux/WSL) oder `build-windows.cmd` (Windows) aus und sende mir die Konsolenausgabe als Bestätigung.
-
+Ein Entwicklungsschritt gilt erst als abgeschlossen, wenn er auf deinem Zielsystem erfolgreich getestet wurde. Führe dazu `meta/test-projekt.sh` (Linux/WSL) oder `build-windows.cmd` (Windows) aus und sende mir die Konsolenausgabe als Bestätigung. Zusätzlich erfolgt nach jedem Schritt eine Selbstbewertung von 1-10. Nur bei einer Bewertung von 10 ohne erkennbare Verbesserungspotentiale wird der Schritt endgültig abgeschlossen.
 **Tipp**: Beginne immer mit dem Lesen der ZENTRALE_ANWEISUNGSDATEI.md!
