@@ -1,12 +1,13 @@
----
-title: StatusBarControl.cs
-version: 1.0
-lastUpdated: 08.07.2025
-author: Tanja Trella
-status: In Bearbeitung
-file: /Arbeitszeiterfassung.UI/Controls/StatusBarControl.cs
-description: Statusleiste mit Benutzerinformationen und Uhrzeit
----
+/*
+Titel: StatusBarControl.cs
+Version: 1.0
+Letzte Aktualisierung: 08.07.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Controls/StatusBarControl.cs
+Beschreibung: Statusleiste mit Benutzerinformationen und Uhrzeit
+*/
+
 
 using System.Windows.Forms;
 using System.Drawing;
