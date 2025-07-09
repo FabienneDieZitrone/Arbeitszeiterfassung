@@ -165,7 +165,7 @@ Das Projekt folgt einem strukturierten 19-Schritte-Plan:
 - **Code-Stil**: C# Coding Conventions
 - **Commits**: Konventionelle Commit-Messages
 - **Tests**: Mindestens 80% Code Coverage
-- **Schrittabschluss**: Ein Entwicklungsschritt wird erst nach positiver Rückmeldung des Benutzers über erfolgreiche Tests als erledigt markiert.
+- **Schrittabschluss**: Ein Entwicklungsschritt wird erst nach positiver Rückmeldung des Benutzers über erfolgreiche Tests als erledigt markiert. Zudem erfolgt eine Selbstbewertung auf einer Skala von 1-10. Nur wenn keinerlei Verbesserungsmöglichkeiten bestehen und die Bewertung eine 10 erreicht, gilt der Schritt als abgeschlossen.
 
 ## 🔒 Sicherheit & Compliance
 
