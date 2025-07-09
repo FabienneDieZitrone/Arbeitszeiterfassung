@@ -25,4 +25,22 @@ public class AutoGenehmigungsServiceTests
         var result = await service.KannAutomatischGenehmigtWerdenAsync(new Aenderungsprotokoll());
         Assert.False(result);
     }
+
+    [Fact]
+    public async Task KannAutomatischGenehmigtWerdenAsync_ReturnsTrue_ForSmallChange()
+    {
+        var service = new AutoGenehmigungsService();
+        var protokoll = new Aenderungsprotokoll
+        {
+            Startzeit_Alt = DateTime.Today,
+            Stoppzeit_Alt = DateTime.Today.AddHours(8),
+            Startzeit_Neu = DateTime.Today.AddMinutes(5),
+            Stoppzeit_Neu = DateTime.Today.AddHours(8).AddMinutes(5),
+            GrundText = "Vergessen zu starten"
+        };
+
+        var result = await service.KannAutomatischGenehmigtWerdenAsync(protokoll);
+
+        Assert.True(result);
+    }
 }

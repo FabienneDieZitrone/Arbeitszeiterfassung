@@ -108,7 +108,7 @@ Das Projekt folgt einem strukturierten 19-Schritte-Plan:
 - Schritt 3.1: Benutzerauthentifizierung
 - Schritt 3.2: Zeiterfassungslogik
 - Schritt 3.3: Rollenbasierte Zugriffskontrolle
-- Schritt 3.4: Genehmigungsworkflow ✓
+ - Schritt 3.4: Genehmigungsworkflow
 
 **Phase 4: Benutzeroberfläche**
 - Schritt 4.1: Hauptfenster
@@ -205,5 +205,4 @@ Bei Fragen oder Problemen:
 3. Kontaktieren Sie die Projektleitung
 
 ---
-
 **Hinweis**: Dieses Projekt befindet sich in aktiver Entwicklung. Folgen Sie dem Arbeitsplan für die schrittweise Implementierung.
