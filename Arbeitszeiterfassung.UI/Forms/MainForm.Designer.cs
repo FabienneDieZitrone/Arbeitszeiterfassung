@@ -1,31 +1,29 @@
 /*
 Titel: MainForm.Designer.cs
-Version: 1.0
-Letzte Aktualisierung: 02.06.2025
+Version: 1.1
+Letzte Aktualisierung: 08.07.2025
 Autor: Tanja Trella
 Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.UI/Forms/MainForm.Designer.cs
-Beschreibung: Automatisch generierter Designer-Code für das Hauptfenster inkl. Logo und Farbschema
+Beschreibung: Designer-Code für das Hauptfenster mit Navigation
 */
 
 namespace Arbeitszeiterfassung.UI.Forms
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Erforderliche Designer-Variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Logo-PictureBox
-        /// </summary>
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.ToolStrip mainToolStrip;
+        private System.Windows.Forms.Panel contentPanel;
+        private Controls.StatusBarControl statusBarControl;
+        private System.Windows.Forms.Timer sessionTimer;
+        private System.Windows.Forms.NotifyIcon trayIcon;
 
         /// <summary>
-        /// Methode zur Ressourcenbereinigung.
+        /// Ressourcenbereinigung.
         /// </summary>
-        /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen.</param>
+        /// <param name="disposing">true, wenn verwaltete Ressourcen gelöscht werden sollen.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -36,44 +34,82 @@ namespace Arbeitszeiterfassung.UI.Forms
         }
 
         #region Vom Windows Form-Designer generierter Code
-
-        /// <summary>
-        /// Designer-Initialisierung
-        /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            mainToolStrip = new System.Windows.Forms.ToolStrip();
+            contentPanel = new System.Windows.Forms.Panel();
+            statusBarControl = new Controls.StatusBarControl();
+            sessionTimer = new System.Windows.Forms.Timer(components);
+            trayIcon = new System.Windows.Forms.NotifyIcon(components);
+            ((System.ComponentModel.ISupportInitialize)(pictureBoxLogo)).BeginInit();
+            SuspendLayout();
             // 
             // pictureBoxLogo
             // 
-            // Das Ressourcenfile wurde noch nicht eingebunden,
-            // daher wird das Bild vorerst nicht gesetzt.
-            this.pictureBoxLogo.Image = null;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(120, 48);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
+            pictureBoxLogo.Image = null;
+            pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new System.Drawing.Size(120, 48);
+            pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBoxLogo.TabIndex = 0;
+            pictureBoxLogo.TabStop = false;
+            // 
+            // mainToolStrip
+            // 
+            mainToolStrip.Location = new System.Drawing.Point(0, 0);
+            mainToolStrip.Name = "mainToolStrip";
+            mainToolStrip.Size = new System.Drawing.Size(900, 25);
+            mainToolStrip.TabIndex = 1;
+            mainToolStrip.Text = "toolStrip1";
+            // 
+            // contentPanel
+            // 
+            contentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            contentPanel.Location = new System.Drawing.Point(12, 70);
+            contentPanel.Name = "contentPanel";
+            contentPanel.Size = new System.Drawing.Size(876, 520);
+            contentPanel.TabIndex = 2;
+            // 
+            // statusBarControl
+            // 
+            statusBarControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            statusBarControl.Location = new System.Drawing.Point(0, 600);
+            statusBarControl.Name = "statusBarControl";
+            statusBarControl.Size = new System.Drawing.Size(900, 30);
+            statusBarControl.TabIndex = 3;
+            // 
+            // sessionTimer
+            // 
+            sessionTimer.Interval = 1000;
+            // 
+            // trayIcon
+            // 
+            trayIcon.Text = "Arbeitszeiterfassung";
+            trayIcon.Visible = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(0, 51, 102); // Dunkelblau
-            this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.pictureBoxLogo);
-            this.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "MainForm";
-            this.Text = "Arbeitszeiterfassung – Mikropartner";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(0, 51, 102);
+            ClientSize = new System.Drawing.Size(900, 630);
+            Controls.Add(statusBarControl);
+            Controls.Add(contentPanel);
+            Controls.Add(mainToolStrip);
+            Controls.Add(pictureBoxLogo);
+            Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            MinimumSize = new System.Drawing.Size(800, 600);
+            Name = "MainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Arbeitszeiterfassung";
+            ((System.ComponentModel.ISupportInitialize)(pictureBoxLogo)).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
-
         #endregion
     }
 }
