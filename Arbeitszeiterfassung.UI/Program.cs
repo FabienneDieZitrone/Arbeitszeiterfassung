@@ -43,7 +43,7 @@ namespace Arbeitszeiterfassung.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // TODO: Hier ggf. Login-/Splash-Logik einbauen
+            // Hier bei Bedarf Login- oder Splash-Logik einbinden
             Application.Run(new Forms.MainForm());
         }
     }
