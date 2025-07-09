@@ -1,12 +1,13 @@
----
-title: StartPageControl.cs
-version: 1.0
-lastUpdated: 08.07.2025
-author: Tanja Trella
-status: In Bearbeitung
-file: /Arbeitszeiterfassung.UI/Controls/StartPageControl.cs
-description: Startseite mit Begrüßung und Start/Stopp Button
----
+/*
+Titel: StartPageControl.cs
+Version: 1.0
+Letzte Aktualisierung: 08.07.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Controls/StartPageControl.cs
+Beschreibung: Startseite mit Begrüßung und Start/Stopp Button
+*/
+
 
 using System;
 using System.Windows.Forms;

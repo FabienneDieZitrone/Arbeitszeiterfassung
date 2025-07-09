@@ -1,12 +1,13 @@
----
-title: MainForm.cs
-version: 1.1
-lastUpdated: 08.07.2025
-author: Tanja Trella
-status: In Bearbeitung
-file: /Arbeitszeiterfassung.UI/Forms/MainForm.cs
-description: Hauptfenster der Anwendung mit Navigation und Statusleiste
----
+
+/*
+Titel: MainForm.cs
+Version: 1.1
+Letzte Aktualisierung: 08.07.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Forms/MainForm.cs
+Beschreibung: Hauptfenster der Anwendung mit Navigation und Statusleiste
+*/
 
 using System;
 using System.Windows.Forms;
