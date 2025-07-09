@@ -196,8 +196,8 @@ if [ $ERRORS -eq 0 ]; then
     echo -e "${GREEN}✓ Alle Tests bestanden!${NC}"
     echo ""
     echo "Das Projekt ist bereit für die Entwicklung."
-    echo "Nächster Schritt: Genehmigungsworkflow umsetzen"
-    echo "Verwenden Sie: /app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md"
+    echo "Nächster Schritt: Hauptfenster implementieren"
+    echo "Verwenden Sie: /app/AZE/Prompts/Schritt_4_1_Hauptfenster.md"
 else
     echo -e "${RED}✗ $ERRORS Test(s) fehlgeschlagen!${NC}"
     echo ""

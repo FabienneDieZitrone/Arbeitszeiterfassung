@@ -23,8 +23,8 @@ Die Basis-Struktur mit BLL, DAL und UI steht. Das Konfigurationsmanagement (Schr
 
 ## Naechste Schritte
 1. Visual Studio oeffnen: `start Arbeitszeiterfassung.sln`
-2. Schritt 3.4 ausfuehren (Genehmigungsworkflow)
-3. Prompt verwenden: `..\Prompts\Schritt_3_4_Genehmigungsworkflow.md`
+2. Schritt 4.1 ausfuehren (Hauptfenster)
+3. Prompt verwenden: `..\Prompts\Schritt_4_1_Hauptfenster.md`
 
 ## Codex Setup Script
 
@@ -90,8 +90,8 @@ Arbeitszeiterfassung Projekt Test
 ✓ Alle Tests bestanden!
 ```
 Das Projekt ist bereit für die Entwicklung.
-Nächster Schritt: Genehmigungsworkflow umsetzen
-Verwenden Sie: /app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md
+Nächster Schritt: Hauptfenster implementieren
+Verwenden Sie: /app/AZE/Prompts/Schritt_4_1_Hauptfenster.md
 
 ## Schrittabschluss
 

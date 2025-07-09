@@ -31,9 +31,9 @@ Diese Datei enthält alle Anweisungen und Kontextinformationen zur Fortsetzung d
 8. **Benutzerauthentifizierung** – Windows-Login mit IP-Pruefung (Schritt 3.1)
 
 ### Nächste Schritte:
-- **Abgeschlossen**: Schritt 3.3 – Rollenbasierte Zugriffskontrolle
-- **Aktuell**: Schritt 3.4 – Genehmigungsworkflow
-- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md`
+- **Abgeschlossen**: Schritt 3.4 – Genehmigungsworkflow
+- **Aktuell**: Schritt 4.1 – Hauptfenster
+- **Prompt verfügbar in**: `/app/AZE/Prompts/Schritt_4_1_Hauptfenster.md`
 
 ### Prüfergebnisse
 Aktueller Testlauf mittels `meta/test-projekt.sh`:
@@ -78,8 +78,8 @@ Aktueller Testlauf mittels `meta/test-projekt.sh`:
 ✓ Alle Tests bestanden!
 ```
 Das Projekt ist bereit für die Entwicklung.
-Nächster Schritt: Genehmigungsworkflow umsetzen
-Verwenden Sie: /app/AZE/Prompts/Schritt_3_4_Genehmigungsworkflow.md
+Nächster Schritt: Hauptfenster implementieren
+Verwenden Sie: /app/AZE/Prompts/Schritt_4_1_Hauptfenster.md
 
 
 ## Entwicklungsrichtlinien
