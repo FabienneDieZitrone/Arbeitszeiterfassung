@@ -1,12 +1,12 @@
----
-title: MainForm.Designer.cs
-version: 1.1
-lastUpdated: 08.07.2025
-author: Tanja Trella
-status: In Bearbeitung
-file: /Arbeitszeiterfassung.UI/Forms/MainForm.Designer.cs
-description: Designer-Code für das Hauptfenster mit Navigation
----
+/*
+Titel: MainForm.Designer.cs
+Version: 1.1
+Letzte Aktualisierung: 08.07.2025
+Autor: Tanja Trella
+Status: In Bearbeitung
+Datei: /Arbeitszeiterfassung.UI/Forms/MainForm.Designer.cs
+Beschreibung: Designer-Code für das Hauptfenster mit Navigation
+*/
 
 namespace Arbeitszeiterfassung.UI.Forms
 {
