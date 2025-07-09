@@ -8,6 +8,7 @@ Datei: /Arbeitszeiterfassung.UI/Controls/StartPageControl.cs
 Beschreibung: Startseite mit Begrüßung und Start/Stopp Button
 */
 
+
 using System;
 using System.Windows.Forms;
 using System.Drawing;

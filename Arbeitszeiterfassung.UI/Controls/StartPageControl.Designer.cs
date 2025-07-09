@@ -8,6 +8,7 @@ Datei: /Arbeitszeiterfassung.UI/Controls/StartPageControl.Designer.cs
 Beschreibung: Designer-Code für die StartPageControl
 */
 
+
 namespace Arbeitszeiterfassung.UI.Controls
 {
     partial class StartPageControl
