@@ -1,4 +1,3 @@
-
 /*
 Titel: MainForm.cs
 Version: 1.1
