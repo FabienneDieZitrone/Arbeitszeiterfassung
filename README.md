@@ -44,9 +44,9 @@ Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das 
 Nach dem Build befindet sich die ausführbare Datei unter:
 
 ```
-Arbeitszeiterfassung.UI\bin\x64\Debug\net8.0-windows\win-x64\Arbeitszeiterfassung.UI.exe
+Arbeitszeiterfassung.UI\bin\Debug\net8.0-windows\win-x64\Arbeitszeiterfassung.UI.exe
 ```
-Für Release-Builds entsprechend im `Release`-Unterordner.
+Für Release-Builds entsprechend im `bin\Release`-Unterordner.
 
 Für Linux/WSL-Systeme steht das Prüfskript `meta/test-projekt.sh` bereit. Dieses überprüft die Projektstruktur, führt einen Build aus und liefert eine Zusammenfassung der Testergebnisse. Bitte sende mir die Konsolenausgabe eines dieser Skripte als Bestätigung der erfolgreichen Tests auf deinem Zielsystem.
 
