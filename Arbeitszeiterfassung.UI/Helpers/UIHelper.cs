@@ -1,12 +1,12 @@
-/*
-Titel: UIHelper.cs
-Version: 1.0
-Letzte Aktualisierung: 08.07.2025
-Autor: Tanja Trella
-Status: In Bearbeitung
-Datei: /Arbeitszeiterfassung.UI/Helpers/UIHelper.cs
-Beschreibung: Methoden zur Vereinheitlichung des UI-Designs
-*/
+---
+title: UIHelper.cs
+version: 1.0
+lastUpdated: 08.07.2025
+author: Tanja Trella
+status: In Bearbeitung
+file: /Arbeitszeiterfassung.UI/Helpers/UIHelper.cs
+description: Methoden zur Vereinheitlichung des UI-Designs
+---
 
 using System.Drawing;
 using System.Windows.Forms;

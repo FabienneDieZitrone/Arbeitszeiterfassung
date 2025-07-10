@@ -1,12 +1,12 @@
-/*
-Titel: ResourceManager.cs
-Version: 1.0
-Letzte Aktualisierung: 08.07.2025
-Autor: Tanja Trella
-Status: In Bearbeitung
-Datei: /Arbeitszeiterfassung.UI/Helpers/ResourceManager.cs
-Beschreibung: Lädt Bilder und Icons für die UI
-*/
+---
+title: ResourceManager.cs
+version: 1.0
+lastUpdated: 08.07.2025
+author: Tanja Trella
+status: In Bearbeitung
+file: /Arbeitszeiterfassung.UI/Helpers/ResourceManager.cs
+description: Lädt Bilder und Icons für die UI
+---
 
 using System.Drawing;
 using System.IO;

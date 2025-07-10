@@ -1,13 +1,12 @@
-/*
-Titel: StartPageControl.Designer.cs
-Version: 1.0
-Letzte Aktualisierung: 08.07.2025
-Autor: Tanja Trella
-Status: In Bearbeitung
-Datei: /Arbeitszeiterfassung.UI/Controls/StartPageControl.Designer.cs
-Beschreibung: Designer-Code für die StartPageControl
-*/
-
+---
+title: StartPageControl.Designer.cs
+version: 1.0
+lastUpdated: 08.07.2025
+author: Tanja Trella
+status: In Bearbeitung
+file: /Arbeitszeiterfassung.UI/Controls/StartPageControl.Designer.cs
+description: Designer-Code für die StartPageControl
+---
 
 namespace Arbeitszeiterfassung.UI.Controls
 {
