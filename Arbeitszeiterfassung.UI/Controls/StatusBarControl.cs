@@ -10,6 +10,7 @@ description: Statusleiste mit Benutzerinformationen und Uhrzeit
 ---
 */
 
+using System;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -33,7 +34,9 @@ public partial class StatusBarControl : UserControl
     }
 
     /// <summary>Aktualisiert die angezeigte Uhrzeit.</summary>
-    public void UpdateTime(DateTime time)
+
+    public void UpdateTime(System.DateTime time)
+
     {
         lblTime.Text = time.ToString("HH:mm:ss");
     }

@@ -7,7 +7,7 @@ Status: In Bearbeitung
 Datei: /Arbeitszeiterfassung.UI/Arbeitszeiterfassung.UI.csproj
 Beschreibung: Projektdatei für das Windows Forms UI
 -->
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>

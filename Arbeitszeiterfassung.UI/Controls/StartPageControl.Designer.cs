@@ -14,7 +14,6 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-
 namespace Arbeitszeiterfassung.UI.Controls
 {
     partial class StartPageControl
