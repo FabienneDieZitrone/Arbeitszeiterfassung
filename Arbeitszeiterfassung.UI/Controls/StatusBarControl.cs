@@ -1,3 +1,5 @@
+/*
+
 ---
 title: StatusBarControl.cs
 version: 1.0
@@ -7,6 +9,7 @@ status: In Bearbeitung
 file: /Arbeitszeiterfassung.UI/Controls/StatusBarControl.cs
 description: Statusleiste mit Benutzerinformationen und Uhrzeit
 ---
+*/
 
 using System.Windows.Forms;
 using System.Drawing;

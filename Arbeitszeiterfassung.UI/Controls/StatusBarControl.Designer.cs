@@ -1,3 +1,5 @@
+/*
+
 ---
 title: StatusBarControl.Designer.cs
 version: 1.0
@@ -7,6 +9,7 @@ status: In Bearbeitung
 file: /Arbeitszeiterfassung.UI/Controls/StatusBarControl.Designer.cs
 description: Designer-Code für StatusBarControl
 ---
+*/
 
 namespace Arbeitszeiterfassung.UI.Controls
 {

@@ -1,3 +1,5 @@
+/*
+
 ---
 title: StartPageControl.Designer.cs
 version: 1.0
@@ -7,6 +9,8 @@ status: In Bearbeitung
 file: /Arbeitszeiterfassung.UI/Controls/StartPageControl.Designer.cs
 description: Designer-Code für die StartPageControl
 ---
+*/
+
 
 namespace Arbeitszeiterfassung.UI.Controls
 {

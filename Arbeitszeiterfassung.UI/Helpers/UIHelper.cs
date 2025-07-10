@@ -1,3 +1,5 @@
+/*
+
 ---
 title: UIHelper.cs
 version: 1.0
@@ -7,6 +9,8 @@ status: In Bearbeitung
 file: /Arbeitszeiterfassung.UI/Helpers/UIHelper.cs
 description: Methoden zur Vereinheitlichung des UI-Designs
 ---
+*/
+
 
 using System.Drawing;
 using System.Windows.Forms;

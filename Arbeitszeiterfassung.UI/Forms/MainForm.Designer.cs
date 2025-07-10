@@ -1,3 +1,5 @@
+/*
+
 ---
 title: MainForm.Designer.cs
 version: 1.1
@@ -7,6 +9,8 @@ status: In Bearbeitung
 file: /Arbeitszeiterfassung.UI/Forms/MainForm.Designer.cs
 description: Designer-Code für das Hauptfenster mit Navigation
 ---
+*/
+
 
 namespace Arbeitszeiterfassung.UI.Forms
 {
