@@ -1,4 +1,5 @@
 /*
+
 ---
 title: StatusBarControl.Designer.cs
 version: 1.0

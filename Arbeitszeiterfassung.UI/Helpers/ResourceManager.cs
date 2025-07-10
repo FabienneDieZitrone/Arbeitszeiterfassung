@@ -1,4 +1,5 @@
 /*
+
 ---
 title: ResourceManager.cs
 version: 1.0
@@ -9,6 +10,7 @@ file: /Arbeitszeiterfassung.UI/Helpers/ResourceManager.cs
 description: Lädt Bilder und Icons für die UI
 ---
 */
+
 
 using System.Drawing;
 using System.IO;

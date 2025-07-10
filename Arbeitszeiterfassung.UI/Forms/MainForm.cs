@@ -1,4 +1,5 @@
 /*
+
 ---
 title: MainForm.cs
 version: 1.1
@@ -9,6 +10,7 @@ file: /Arbeitszeiterfassung.UI/Forms/MainForm.cs
 description: Hauptfenster der Anwendung mit Navigation und Statusleiste
 ---
 */
+
 
 using System;
 using System.Windows.Forms;

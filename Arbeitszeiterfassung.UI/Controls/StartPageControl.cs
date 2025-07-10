@@ -1,4 +1,5 @@
 /*
+
 ---
 title: StartPageControl.cs
 version: 1.0
@@ -9,6 +10,7 @@ file: /Arbeitszeiterfassung.UI/Controls/StartPageControl.cs
 description: Startseite mit Begrüßung und Start/Stopp Button
 ---
 */
+
 
 using System;
 using System.Windows.Forms;
