@@ -40,6 +40,7 @@ Danach steht `dotnet` mit Version 8 automatisch zur Verfügung.
 
 Um das Projekt unter Windows zu bauen und die Unit-Tests auszuführen, kann das Skript `build-windows.cmd` genutzt werden. Es installiert die erforderliche Windows-Desktop-Workload und führt anschließend `dotnet build` sowie `dotnet test` aus. Das UI-Projekt lässt sich ausschließlich unter Windows kompilieren, weil das `Microsoft.NET.Sdk.WindowsDesktop` benötigt wird. Unter Linux wird dieses Projekt daher im Prüfskript übersprungen.
 
+
 Nach dem Build befindet sich die ausführbare Datei unter:
 
 ```
