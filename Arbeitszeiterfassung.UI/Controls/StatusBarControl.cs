@@ -34,6 +34,7 @@ public partial class StatusBarControl : UserControl
     }
 
     /// <summary>Aktualisiert die angezeigte Uhrzeit.</summary>
+
     public void UpdateTime(System.DateTime time)
     {
         lblTime.Text = time.ToString("HH:mm:ss");
