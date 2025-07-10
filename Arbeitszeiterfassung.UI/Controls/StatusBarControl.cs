@@ -1,5 +1,4 @@
 /*
-
 ---
 title: StatusBarControl.cs
 version: 1.0

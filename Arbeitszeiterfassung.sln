@@ -13,6 +13,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbeitszeiterfassung.UI", "Arbeitszeiterfassung.UI\Arbeitszeiterfassung.UI.csproj", "{F3A82DE8-7A2D-4A16-8E25-FFD8D545B5FA}"
 EndProject
 Global
+
         GlobalSection(SolutionConfigurationPlatforms) = preSolution
                 Debug|x64 = Debug|x64
                 Release|x64 = Release|x64

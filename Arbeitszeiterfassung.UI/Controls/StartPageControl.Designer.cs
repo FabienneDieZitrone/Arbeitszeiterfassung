@@ -1,5 +1,4 @@
 /*
-
 ---
 title: StartPageControl.Designer.cs
 version: 1.0
@@ -10,6 +9,10 @@ file: /Arbeitszeiterfassung.UI/Controls/StartPageControl.Designer.cs
 description: Designer-Code für die StartPageControl
 ---
 */
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 
 namespace Arbeitszeiterfassung.UI.Controls

@@ -1,5 +1,4 @@
 /*
-
 ---
 title: StatusBarControl.Designer.cs
 version: 1.0
@@ -10,6 +9,10 @@ file: /Arbeitszeiterfassung.UI/Controls/StatusBarControl.Designer.cs
 description: Designer-Code für StatusBarControl
 ---
 */
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Arbeitszeiterfassung.UI.Controls
 {

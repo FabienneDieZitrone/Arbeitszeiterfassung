@@ -1,5 +1,4 @@
 /*
-
 ---
 title: MainForm.Designer.cs
 version: 1.1
@@ -11,6 +10,9 @@ description: Designer-Code für das Hauptfenster mit Navigation
 ---
 */
 
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Arbeitszeiterfassung.UI.Forms
 {
