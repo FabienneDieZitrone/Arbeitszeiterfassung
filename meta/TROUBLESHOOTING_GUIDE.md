@@ -206,6 +206,23 @@ public static class ControlExtensions
 lblStatus.InvokeIfRequired(() => lblStatus.Text = "Aktualisiert");
 ```
 
+### Problem: "SDK 'Microsoft.NET.Sdk.WindowsDesktop' not found"
+**Symptome**: Der Build bricht ab mit
+```
+error MSB4236: The SDK 'Microsoft.NET.Sdk.WindowsDesktop' specified could not be found.
+```
+
+**Lösung**:
+1. Diese Workload ist nur unter Windows verfügbar. Führe auf einem Windows-System folgendes aus:
+   ```cmd
+   dotnet workload install windowsdesktop
+   ```
+   Alternativ kannst du `build-windows.cmd` verwenden, das die Workload automatisch installiert.
+2. Danach das Projekt neu bauen:
+   ```cmd
+   dotnet build Arbeitszeiterfassung.sln
+   ```
+
 ---
 
 ## 🔄 Synchronisationsprobleme
